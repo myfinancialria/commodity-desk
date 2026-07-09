@@ -17,7 +17,6 @@ import llm
 
 FEEDS = [
     ("OilPrice", "https://oilprice.com/rss/main"),
-    ("Reuters Commodities", "https://www.reutersagency.com/feed/?best-topics=commodities&post_type=best"),
     ("Investing Commodities", "https://www.investing.com/rss/news_11.rss"),
     ("Investing Economy", "https://www.investing.com/rss/news_14.rss"),
     ("ET Markets", "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"),
