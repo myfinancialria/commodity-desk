@@ -235,6 +235,62 @@ STRATEGIES = {
 }
 
 
+def bracket_trades(prices, positions, sl_mult=1.5, tgt_mult=3.0) -> list[dict]:
+    """Turn a strategy's signals into a professional trade blotter: enter on the
+    signal, place an ATR stop (1.5x) and target (3x), and exit on the FIRST of
+    stop / target / signal-flip. Returns every trade with entry & exit price+date,
+    the SL/target levels, exit reason, % return and R-multiple."""
+    close = prices["Close"].astype(float)
+    high, low = prices["High"].astype(float), prices["Low"].astype(float)
+    atr = _atr(prices, 14)
+    idx = close.index
+    v = positions.reindex(idx).ffill().fillna(0.0).values
+    n, i, trades = len(v), 0, []
+    while i < n:
+        side = v[i]
+        if side == 0:
+            i += 1
+            continue
+        entry = float(close.iloc[i])
+        a = float(atr.iloc[i]) if not pd.isna(atr.iloc[i]) else entry * 0.02
+        if side > 0:
+            sl, tgt = entry - sl_mult * a, entry + tgt_mult * a
+        else:
+            sl, tgt = entry + sl_mult * a, entry - tgt_mult * a
+        j, reason, exitp = i + 1, None, entry
+        while j < n:
+            if v[j] != side:                       # signal flip / flat
+                reason, exitp = "Signal", float(close.iloc[j]); break
+            if side > 0:
+                if low.iloc[j] <= sl: reason, exitp = "Stop", sl; break
+                if high.iloc[j] >= tgt: reason, exitp = "Target", tgt; break
+            else:
+                if high.iloc[j] >= sl: reason, exitp = "Stop", sl; break
+                if low.iloc[j] <= tgt: reason, exitp = "Target", tgt; break
+            j += 1
+        if reason is None:
+            reason, exitp, j = "Open", float(close.iloc[-1]), n - 1
+        ret = (exitp / entry - 1) * (1 if side > 0 else -1)
+        risk = sl_mult * a / entry
+        trades.append({
+            "side": "Long" if side > 0 else "Short",
+            "entry_date": idx[i].date().isoformat(), "entry": round(entry, 2),
+            "sl": round(sl, 2), "target": round(tgt, 2),
+            "exit_date": idx[j].date().isoformat(), "exit": round(exitp, 2),
+            "reason": reason, "ret_pct": round(ret * 100, 2),
+            "r_multiple": round(ret / risk, 2) if risk else 0.0,
+            "hold_days": int(j - i),
+        })
+        if reason == "Signal":
+            i = j                                  # flip point begins the next trade
+        else:
+            k = j + 1                              # after a bracket exit, wait for a fresh signal
+            while k < n and v[k] == side:
+                k += 1
+            i = k
+    return trades
+
+
 def run_all(prices: pd.DataFrame, events: list[dict]) -> dict:
     out = {}
     for name, fn in STRATEGIES.items():

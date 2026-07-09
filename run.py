@@ -36,6 +36,63 @@ def events_for(key: str, cfg: dict, prices: dict) -> list[dict]:
     return []
 
 
+def _add_inr_levels(sig: dict) -> None:
+    """Convert the entry/stop/target from the international price into MCX ₹ using
+    the live ₹/international ratio (only when the Fyers MCX price is available)."""
+    m, last, L = sig.get("mcx"), sig.get("last"), sig.get("levels", {})
+    if not m or not last or not L.get("entry"):
+        return
+    r = m["lp"] / last
+    sig["levels_inr"] = {"unit": m["unit"],
+                          "entry": round(L["entry"] * r, 2),
+                          "stop": round(L["stop"] * r, 2) if L.get("stop") else None,
+                          "target": round(L["target"] * r, 2) if L.get("target") else None}
+
+
+def _successful_strategies(commodities: dict) -> list[dict]:
+    """Rank strategies by their average Sharpe across the four commodities."""
+    agg = {}
+    for c in commodities.values():
+        for name, b in (c.get("backtests") or {}).items():
+            if "error" in b:
+                continue
+            a = agg.setdefault(name, {"sharpe": [], "cagr": [], "win": []})
+            a["sharpe"].append(b.get("sharpe", 0))
+            a["cagr"].append(b.get("cagr_pct", 0))
+            a["win"].append(b.get("trade_win_rate_pct", 0))
+    out = []
+    for name, a in agg.items():
+        n = len(a["sharpe"]) or 1
+        out.append({"strategy": name,
+                    "avg_sharpe": round(sum(a["sharpe"]) / n, 2),
+                    "avg_cagr": round(sum(a["cagr"]) / n, 1),
+                    "avg_win": round(sum(a["win"]) / n, 1)})
+    return sorted(out, key=lambda x: x["avg_sharpe"], reverse=True)
+
+
+HOW_TO = """
+### How to take a trade from this desk
+1. **Start with the signal.** Each commodity shows a **Bullish / Bearish / Neutral**
+   verdict and a *conviction* (how many of trend, the inventory/USD event edge and
+   the news agree). Trade only the higher-conviction (2–3/3) setups; skip Neutral.
+2. **Use the levels.** The card gives a **reference entry, stop-loss (SL) and target**
+   — in ₹ on MCX when the Fyers price is live, otherwise on the international price.
+   The SL is 1.5×ATR from entry; the target is 3×ATR (a ~2:1 reward:risk).
+3. **Size by risk, not by lots.** Risk a fixed **1–2% of capital per trade**.
+   Quantity = (risk amount) ÷ (entry − SL distance). Never widen the stop.
+4. **Enter on confirmation** (a close in the signal's direction), place the SL and
+   target as a bracket, and let it run. Exit if the SL or target hits, or if the
+   signal flips.
+5. **Respect the report days.** Crude reacts to the Wed EIA inventory, gas to Thu
+   storage, metals to USD/rate shocks — the Event-Studies tab shows how the market
+   has historically moved, so avoid fresh entries into a print you can't stomach.
+6. **Lean on what has edge.** The Backtests + Trade History tabs show which
+   strategies actually worked over 3 years — prefer signals aligned with those.
+
+*Educational only — not advice. Backtests are hypothetical; manage your own risk.*
+"""
+
+
 def main() -> int:
     today = dt.date.today().isoformat()
     print("=== Commodity Desk run:", today, "===")
@@ -55,19 +112,28 @@ def main() -> int:
         events = events_for(key, cfg, prices)
         study = event_study.study(px, events) if px is not None and not px.empty else {"summary": {"by_direction": {}}, "events": []}
         # backtests run over the recent BACKTEST_YEARS window; studies use all history
+        trade_history = {}
         if px is not None and not px.empty:
             cutoff = pd.Timestamp.today().normalize() - pd.DateOffset(years=BACKTEST_YEARS)
             bt_px = px[px.index >= cutoff]
             bts = backtest.run_all(bt_px, events)
+            # full trade blotter for the best (highest-Sharpe) strategy
+            ok = {n: b for n, b in bts.items() if "error" not in b and b.get("num_trades")}
+            if ok:
+                best = max(ok, key=lambda n: ok[n].get("sharpe", -9))
+                pos = backtest.STRATEGIES[best](bt_px, events)
+                trade_history = {"strategy": best,
+                                  "trades": backtest.bracket_trades(bt_px, pos)}
         else:
             bts = {}
         sig = signals.build(key, cfg, px, events, study, bts, news_by.get(key, []))
         sig["mcx"] = mcx.get(key)          # live Indian ₹ price (or None)
+        _add_inr_levels(sig)               # entry/SL/target in ₹ when MCX is live
         sig_list.append(sig)
         commodities[key] = {
             "name": cfg["name"], "unit": cfg["unit"], "event": cfg["event"],
             "n_events": len(events),
-            "study": study, "backtests": bts,
+            "study": study, "backtests": bts, "trade_history": trade_history,
             "news": news_by.get(key, []),
             "signal": sig,
         }
@@ -78,6 +144,8 @@ def main() -> int:
         "commodities": commodities,
         "signals": sig_list,
         "news_all": scored[:40],
+        "successful_strategies": _successful_strategies(commodities),
+        "how_to": HOW_TO,
     }
     print("[narrative] writing veteran desk note...")
     payload["desk_note"] = narrative.write(payload)

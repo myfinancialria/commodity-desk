@@ -77,8 +77,10 @@ th{{background:var(--soft);color:var(--mut);font-size:11px;text-transform:upperc
 <div class="wrap">
  <div class="tabs" id="tabs"></div>
  <div id="v-signals" class="view active"></div>
+ <div id="v-howto" class="view"></div>
  <div id="v-study" class="view"></div>
  <div id="v-backtest" class="view"></div>
+ <div id="v-history" class="view"></div>
  <div id="v-news" class="view"></div>
  <div id="v-note" class="view"></div>
  <div class="disc"><b>Educational / research only — not investment advice.</b> Event-studies and
@@ -94,7 +96,7 @@ const bcls=v=>v==='Bullish'?'b-bull':v==='Bearish'?'b-bear':'b-neu';
 const pc=v=>v==null?'—':(v>=0?'+':'')+v+'%';
 const sgn=v=>v==null?'':'class="'+(v>=0?'pos':'neg')+'"';
 
-const TABS=[['signals','Signals'],['study','Event Studies'],['backtest','Backtests'],['news','News & Geopolitics'],['note','Desk Note']];
+const TABS=[['signals','Signals'],['howto','How to Trade'],['study','Event Studies'],['backtest','Backtests'],['history','Trade History'],['news','News & Geopolitics'],['note','Desk Note']];
 el('tabs').innerHTML=TABS.map((t,i)=>`<button class="tab ${{i?'':'active'}}" data-t="${{t[0]}}">${{t[1]}}</button>`).join('');
 document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{{
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
@@ -114,9 +116,14 @@ el('v-signals').innerHTML='<div class="grid">'+D.signals.filter(s=>s.available).
     <div class="kv"><span>News tilt</span><b>${{s.news_tilt}} (${{s.news_counts.bullish}}↑/${{s.news_counts.bear||s.news_counts.bearish}}↓)</b></div>
     <div class="kv"><span>Leans on</span><b>${{s.leans_on_strategy||'—'}}</b></div>
     <div class="kv"><span>Edge (CAGR·Sharpe·win)</span><b>${{pc(st.cagr_pct)}} · ${{st.sharpe??'—'}} · ${{st.trade_win_rate_pct??'—'}}%</b></div>
-    ${{L.entry?`<div class="lvl"><div><div class="lab">Ref</div><div class="val">${{L.entry}}</div></div>
+    ${{L.entry?`<div class="lab" style="font-size:10px;color:var(--mut);text-transform:uppercase;margin-top:10px">Levels — international (${{s.unit||''}})</div>
+      <div class="lvl"><div><div class="lab">Entry</div><div class="val">${{L.entry}}</div></div>
       <div><div class="lab">Stop</div><div class="val">${{L.stop??'—'}}</div></div>
       <div><div class="lab">Target</div><div class="val">${{L.target??'—'}}</div></div></div>`:''}}
+    ${{s.levels_inr?`<div class="lab" style="font-size:10px;color:var(--accent-ink);text-transform:uppercase;margin-top:8px">Levels — MCX India (${{s.levels_inr.unit}})</div>
+      <div class="lvl"><div><div class="lab">Entry</div><div class="val">₹${{s.levels_inr.entry.toLocaleString('en-IN')}}</div></div>
+      <div><div class="lab">Stop</div><div class="val">${{s.levels_inr.stop?'₹'+s.levels_inr.stop.toLocaleString('en-IN'):'—'}}</div></div>
+      <div><div class="lab">Target</div><div class="val">${{s.levels_inr.target?'₹'+s.levels_inr.target.toLocaleString('en-IN'):'—'}}</div></div></div>`:''}}
     <p class="sub" style="margin:10px 0 0">${{s.rationale||''}}</p></div>`;
 }}).join('')+'</div>';
 
@@ -171,5 +178,30 @@ function md(t){{
     return l.trim()?'<p>'+l+'</p>':'';
   }}).join('').replace(/(<li>.*?<\\/li>)+/g,m=>'<ul>'+m+'</ul>');
 }}
+// ---- How to trade + successful strategies ----
+const ss=D.successful_strategies||[];
+el('v-howto').innerHTML=
+ '<div class="panel note">'+md(D.how_to||'')+'</div>'+
+ '<div class="panel"><h2>Most successful strategies (avg across all four commodities, 3-year)</h2>'+
+ (ss.length?`<table><thead><tr><th>#</th><th>Strategy</th><th>Avg Sharpe</th><th>Avg CAGR</th><th>Avg win-rate</th></tr></thead><tbody>`+
+   ss.map((r,i)=>`<tr><td>${{i+1}}</td><td><b>${{r.strategy}}</b></td><td>${{r.avg_sharpe}}</td>
+     <td ${{sgn(r.avg_cagr)}}>${{pc(r.avg_cagr)}}</td><td>${{r.avg_win}}%</td></tr>`).join('')+'</tbody></table>'
+   :'<p class="sub">No data.</p>')+'</div>';
+
+// ---- Trade history (full blotter for the best strategy per commodity) ----
+el('v-history').innerHTML=Object.entries(D.commodities).map(([k,c])=>{{
+  const th=c.trade_history||{{}}, tr=th.trades||[];
+  const rows=tr.slice().reverse().map(t=>`<tr>
+    <td><span class="tag ${{t.side==='Long'?'bull':'bear'}}">${{t.side}}</span></td>
+    <td>${{t.entry_date}}</td><td>${{t.entry}}</td><td>${{t.sl}}</td><td>${{t.target}}</td>
+    <td>${{t.exit_date}}</td><td>${{t.exit}}</td><td>${{t.reason}}</td>
+    <td ${{sgn(t.ret_pct)}}>${{pc(t.ret_pct)}}</td><td ${{t.r_multiple>=0?'class="pos"':'class="neg"'}}>${{t.r_multiple}}R</td><td>${{t.hold_days}}d</td></tr>`).join('');
+  const wins=tr.filter(t=>t.ret_pct>0).length;
+  return `<div class="panel"><h2>${{c.name}} — trade history <span class="pill">${{th.strategy||'—'}}</span></h2>
+    ${{tr.length?`<div class="sub" style="margin-bottom:10px">${{tr.length}} trades · ${{Math.round(wins/tr.length*100)}}% winners · exit on stop / target / signal-flip (ATR bracket, 1.5×SL / 3×target). Entries/exits at the daily close.</div>
+      <div style="max-height:420px;overflow:auto"><table><thead><tr><th>Side</th><th>Entry date</th><th>Entry</th><th>SL</th><th>Target</th><th>Exit date</th><th>Exit</th><th>Reason</th><th>Return</th><th>R</th><th>Held</th></tr></thead><tbody>${{rows}}</tbody></table></div>`
+      :'<p class="sub">No trades (needs price history).</p>'}}</div>`;
+}}).join('');
+
 el('v-note').innerHTML='<div class="panel note">'+md(D.desk_note)+'</div>';
 </script></body></html>"""
