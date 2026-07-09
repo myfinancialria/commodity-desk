@@ -111,8 +111,125 @@ def strat_event_plus_trend(prices: pd.DataFrame, events: list[dict]) -> pd.Serie
     return pd.Series(np.where(np.sign(ev) == np.sign(tr), ev, 0.0), index=ev.index)
 
 
+# ---- indicators ----
+def _ema(s, n):
+    return s.ewm(span=n, adjust=False).mean()
+
+
+def _atr(prices, n=14):
+    d = prices
+    tr = pd.concat([d["High"] - d["Low"],
+                    (d["High"] - d["Close"].shift()).abs(),
+                    (d["Low"] - d["Close"].shift()).abs()], axis=1).max(axis=1)
+    return tr.rolling(n).mean()
+
+
+def _rsi(s, n=14):
+    d = s.diff()
+    up = d.clip(lower=0).rolling(n).mean()
+    dn = (-d.clip(upper=0)).rolling(n).mean()
+    rs = up / dn.replace(0, np.nan)
+    return (100 - 100 / (1 + rs)).fillna(50)
+
+
+# ---- professional strategy library (each -> positions -1/0/+1) ----
+def strat_donchian(prices, events=None, entry=20, exit_=10) -> pd.Series:
+    """Turtle-style channel breakout: long above the 20-day high, short below the
+    20-day low; ride until the opposite 10-day channel flips it."""
+    c = prices["Close"].astype(float)
+    hi, lo = prices["High"].rolling(entry).max(), prices["Low"].rolling(entry).min()
+    pos = pd.Series(np.nan, index=c.index)
+    pos[c > hi.shift()] = 1.0
+    pos[c < lo.shift()] = -1.0
+    return pos.ffill().fillna(0.0)
+
+
+def strat_macd(prices, events=None, f=12, s=26, sig=9) -> pd.Series:
+    """MACD line vs signal line — a smoother trend filter than raw MAs."""
+    c = prices["Close"].astype(float)
+    macd = _ema(c, f) - _ema(c, s)
+    return pd.Series(np.where(macd > _ema(macd, sig), 1.0, -1.0), index=c.index)
+
+
+def strat_rsi2(prices, events=None) -> pd.Series:
+    """Connors RSI(2) mean-reversion with a 200-day trend filter — buy dips in an
+    uptrend, sell rips in a downtrend, exit at the 5-day mean."""
+    c = prices["Close"].astype(float)
+    r, ma200, ma5 = _rsi(c, 2), c.rolling(200).mean(), c.rolling(5).mean()
+    pos = pd.Series(np.nan, index=c.index)
+    pos[(r < 10) & (c > ma200)] = 1.0
+    pos[(r > 90) & (c < ma200)] = -1.0
+    pos[(c > ma5) & (pos.isna())] = 0.0     # exit longs at the mean
+    return pos.ffill().fillna(0.0)
+
+
+def strat_bollinger(prices, events=None, n=20, k=2.0) -> pd.Series:
+    """Bollinger-band reversion: fade moves outside the bands, flat inside."""
+    c = prices["Close"].astype(float)
+    ma, sd = c.rolling(n).mean(), c.rolling(n).std()
+    pos = pd.Series(0.0, index=c.index)
+    pos[c < ma - k * sd] = 1.0
+    pos[c > ma + k * sd] = -1.0
+    return pos
+
+
+def strat_keltner_breakout(prices, events=None, n=20, mult=2.0) -> pd.Series:
+    """Volatility (Keltner) breakout — long/short when price clears the EMA ± ATR
+    channel; a classic momentum-ignition system."""
+    c = prices["Close"].astype(float)
+    mid, band = _ema(c, n), mult * _atr(prices, n)
+    pos = pd.Series(np.nan, index=c.index)
+    pos[c > mid + band] = 1.0
+    pos[c < mid - band] = -1.0
+    return pos.ffill().fillna(0.0)
+
+
+def strat_momentum(prices, events=None, lb=90) -> pd.Series:
+    """Time-series momentum: long if the trailing 90-day return is positive."""
+    c = prices["Close"].astype(float)
+    roc = c / c.shift(lb) - 1
+    return pd.Series(np.where(roc > 0, 1.0, -1.0), index=c.index)
+
+
+def strat_supertrend(prices, events=None, n=10, mult=3.0) -> pd.Series:
+    """Supertrend(10,3) — the widely-used ATR trailing-stop trend system."""
+    c = prices["Close"].astype(float)
+    atr = _atr(prices, n)
+    hl2 = (prices["High"] + prices["Low"]) / 2
+    up, dn = hl2 - mult * atr, hl2 + mult * atr
+    dir_ = pd.Series(1.0, index=c.index)
+    fup, fdn = up.copy(), dn.copy()
+    for i in range(1, len(c)):
+        fup.iloc[i] = max(up.iloc[i], fup.iloc[i-1]) if c.iloc[i-1] > fup.iloc[i-1] else up.iloc[i]
+        fdn.iloc[i] = min(dn.iloc[i], fdn.iloc[i-1]) if c.iloc[i-1] < fdn.iloc[i-1] else dn.iloc[i]
+        dir_.iloc[i] = 1.0 if c.iloc[i] > fdn.iloc[i-1] else (-1.0 if c.iloc[i] < fup.iloc[i-1] else dir_.iloc[i-1])
+    return dir_
+
+
+def strat_seasonality(prices, events=None) -> pd.Series:
+    """Calendar seasonality — long in months that have been positive on average,
+    short in weak months. Bias is computed EXPANDING (only data strictly before
+    each date) so there is no look-ahead."""
+    c = prices["Close"].astype(float)
+    df = pd.DataFrame({"ret": c.pct_change(), "m": c.index.month}, index=c.index)
+    pos = []
+    for i, dt in enumerate(c.index):
+        past = df.iloc[:i]
+        b = past.loc[past["m"] == dt.month, "ret"].mean()
+        pos.append(1.0 if (b >= 0 or b != b) else -1.0)  # NaN (no history) -> long
+    return pd.Series(pos, index=c.index)
+
+
 STRATEGIES = {
     "Trend (20/50 MA)": strat_trend,
+    "Donchian breakout (20/10)": strat_donchian,
+    "MACD (12/26/9)": strat_macd,
+    "Momentum (90d)": strat_momentum,
+    "Keltner breakout (ATR)": strat_keltner_breakout,
+    "Supertrend (10,3)": strat_supertrend,
+    "RSI(2) mean-reversion": strat_rsi2,
+    "Bollinger reversion": strat_bollinger,
+    "Seasonality (month bias)": strat_seasonality,
     "Inventory/Event edge": strat_event,
     "Event + Trend filter": strat_event_plus_trend,
 }

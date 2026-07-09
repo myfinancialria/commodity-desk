@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 .venv/
 *.log
+access_token.txt
+fyersApi*.log

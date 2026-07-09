@@ -72,7 +72,7 @@ th{{background:var(--soft);color:var(--mut);font-size:11px;text-transform:upperc
 @media(max-width:640px){{.tabs{{overflow-x:auto;flex-wrap:nowrap}}}}
 </style></head><body>
 <header><div class="wrap brand"><div class="mark">CD</div>
- <div><h1>Commodity Desk</h1><div class="sub">Inventory event-studies · backtests · live signals · as of <b id="asof"></b> · <span id="gen"></span></div></div>
+ <div><h1>Commodity Desk</h1><div class="sub">Event-studies · 3-year pro-strategy backtests · live signals (MCX ₹ via Fyers) · as of <b id="asof"></b> · <span id="gen"></span></div></div>
 </div></header>
 <div class="wrap">
  <div class="tabs" id="tabs"></div>
@@ -108,6 +108,7 @@ el('v-signals').innerHTML='<div class="grid">'+D.signals.filter(s=>s.available).
   return `<div class="card"><div class="row"><h3>${{s.name}}</h3>
     <span class="badge ${{bcls(s.verdict)}}">${{s.verdict}}</span></div>
     <div class="sub">Last <b>${{s.last}}</b> ${{s.unit||''}} · trend ${{s.trend}} · conviction ${{s.conviction}}/3</div>
+    ${{s.mcx?`<div class="sub">MCX (India): <b>₹${{s.mcx.lp.toLocaleString('en-IN')}}</b> ${{s.mcx.unit}} (${{pc(s.mcx.chp)}}) · <span class="pill">Fyers</span></div>`:''}}
     <div class="kv"><span>Latest report skew</span><b>${{e.direction||'—'}}</b></div>
     <div class="kv"><span>That signal's hit-rate</span><b>${{e.hit_rate!=null?e.hit_rate+'% ('+(e.count||0)+')':'—'}}</b></div>
     <div class="kv"><span>News tilt</span><b>${{s.news_tilt}} (${{s.news_counts.bullish}}↑/${{s.news_counts.bear||s.news_counts.bearish}}↓)</b></div>
@@ -146,7 +147,7 @@ el('v-backtest').innerHTML=Object.entries(D.commodities).map(([k,c])=>{{
     <td>${{b.sharpe}}</td><td class="neg">${{pc(b.max_drawdown_pct)}}</td>
     <td>${{b.trade_win_rate_pct}}%</td><td>${{b.num_trades}}</td></tr>`).join('');
   const best=Object.entries(bts).filter(([n,b])=>!b.error).sort((a,z)=>(z[1].sharpe||-9)-(a[1].sharpe||-9))[0];
-  return `<div class="panel"><h2>${{c.name}} — strategy backtests</h2>
+  return `<div class="panel"><h2>${{c.name}} — strategy backtests <span class="pill">3-year</span></h2>
     ${{rows?`<table><thead><tr><th>Strategy</th><th>Total</th><th>CAGR</th><th>Sharpe</th><th>Max DD</th><th>Win-rate</th><th>Trades</th></tr></thead><tbody>${{rows}}</tbody></table>
       ${{best?`<div class="sub" style="margin-top:12px">Best by Sharpe — <b>${{best[0]}}</b> equity curve:</div>${{spark(best[1].equity_curve)}}`:''}}`
       :'<p class="sub">No backtest (needs price history / events).</p>'}}</div>`;

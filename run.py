@@ -15,12 +15,14 @@ import build_dashboard
 import backtest
 import data_eia
 import data_events
+import data_fyers
 import data_prices
 import event_study
 import narrative
 import news_geo
 import signals
-from config import COMMODITIES
+import pandas as pd
+from config import COMMODITIES, BACKTEST_YEARS
 
 HERE = Path(__file__).parent
 DOCS = HERE / "docs"
@@ -43,14 +45,24 @@ def main() -> int:
     scored = news_geo.analyse(news_geo.fetch_headlines())
     news_by = news_geo.by_commodity(scored)
 
+    print("[fyers] live MCX (Indian) prices...")
+    mcx = data_fyers.fetch_mcx_prices()   # {} if Fyers not configured
+
     commodities, sig_list = {}, []
     for key, cfg in COMMODITIES.items():
         px = prices.get(key)
         print(f"[{key}] events + study + backtest...")
         events = events_for(key, cfg, prices)
         study = event_study.study(px, events) if px is not None and not px.empty else {"summary": {"by_direction": {}}, "events": []}
-        bts = backtest.run_all(px, events) if px is not None and not px.empty else {}
+        # backtests run over the recent BACKTEST_YEARS window; studies use all history
+        if px is not None and not px.empty:
+            cutoff = pd.Timestamp.today().normalize() - pd.DateOffset(years=BACKTEST_YEARS)
+            bt_px = px[px.index >= cutoff]
+            bts = backtest.run_all(bt_px, events)
+        else:
+            bts = {}
         sig = signals.build(key, cfg, px, events, study, bts, news_by.get(key, []))
+        sig["mcx"] = mcx.get(key)          # live Indian ₹ price (or None)
         sig_list.append(sig)
         commodities[key] = {
             "name": cfg["name"], "unit": cfg["unit"], "event": cfg["event"],

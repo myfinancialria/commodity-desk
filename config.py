@@ -63,7 +63,9 @@ EXPECTATION_MODE = "seasonal_5y"   # or "prior_avg"
 # Event-study windows (trading days relative to the release day t0).
 STUDY_WINDOWS = [("t0", 0), ("t+1", 1), ("t+3", 3), ("t+5", 5)]
 
-# How far back to pull price + inventory history.
+# How far back to pull price + inventory history (event-studies use all of it).
 HISTORY_YEARS = 12
+# Backtests are run over this many recent years (the professional-strategy suite).
+BACKTEST_YEARS = 3
 
 DASH_TITLE = "Commodity Desk — Inventory, Backtests & Signals"

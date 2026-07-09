@@ -31,12 +31,27 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
 
+      # Optional — mints access_token.txt for live MCX (₹) prices. Skips cleanly
+      # if the Fyers secrets aren't set; the rest of the pipeline still runs.
+      - name: Fyers login (MCX prices)
+        continue-on-error: true
+        env:
+          FYERS_CLIENT_ID: ${{ secrets.FYERS_CLIENT_ID }}
+          FYERS_SECRET: ${{ secrets.FYERS_SECRET }}
+          FYERS_REDIRECT: ${{ secrets.FYERS_REDIRECT }}
+          FYERS_FY_ID: ${{ secrets.FYERS_FY_ID }}
+          FYERS_PIN: ${{ secrets.FYERS_PIN }}
+          FYERS_TOTP_KEY: ${{ secrets.FYERS_TOTP_KEY }}
+        run: |
+          if [ -n "$FYERS_CLIENT_ID" ]; then python auto_login.py; else echo "Fyers not configured — skipping MCX"; fi
+
       - name: Run Commodity Desk pipeline
         env:
           EIA_API_KEY: ${{ secrets.EIA_API_KEY }}                 # free: eia.gov/opendata
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}   # Qwen + Llama
           QWEN_MODEL: ${{ vars.QWEN_MODEL || 'qwen/qwen-2.5-72b-instruct' }}
           LLAMA_MODEL: ${{ vars.LLAMA_MODEL || 'meta-llama/llama-3.3-70b-instruct' }}
+          FYERS_CLIENT_ID: ${{ secrets.FYERS_CLIENT_ID }}         # live MCX ₹ prices
         run: python run.py
 
       - name: Commit dashboard
