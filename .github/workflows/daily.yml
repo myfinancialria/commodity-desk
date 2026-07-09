@@ -1,0 +1,59 @@
+name: Commodity Desk — daily
+
+on:
+  schedule:
+    # 22:15 UTC Mon–Fri — after the US session + EIA crude (Wed) / natgas (Thu)
+    # weekly prints have settled. GIFT/holidays just re-run harmlessly.
+    - cron: "15 22 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Run Commodity Desk pipeline
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}                 # free: eia.gov/opendata
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}   # Qwen + Llama
+          QWEN_MODEL: ${{ vars.QWEN_MODEL || 'qwen/qwen-2.5-72b-instruct' }}
+          LLAMA_MODEL: ${{ vars.LLAMA_MODEL || 'meta-llama/llama-3.3-70b-instruct' }}
+        run: python run.py
+
+      - name: Commit dashboard
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A docs
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "commodity desk — $(date -u +%Y-%m-%d)"
+            for i in 1 2 3 4 5; do git pull --rebase --no-edit && git push && break; sleep $((5*i)); done
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deploy
+        uses: actions/deploy-pages@v4
