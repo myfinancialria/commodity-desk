@@ -86,5 +86,6 @@ def fetch_mcx_prices() -> dict:
                     "lp": round(float(v.get("lp")), 2),
                     "chp": round(float(v.get("chp") or 0), 2)}
     if out:
-        print(f"  MCX live: {', '.join(f'{k} {out[k]['lp']}' for k in out)}")
+        summary = ", ".join(f"{k} {out[k]['lp']}" for k in out)
+        print(f"  MCX live: {summary}")
     return out
