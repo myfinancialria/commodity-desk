@@ -66,13 +66,13 @@ def summarise(reactions: pd.DataFrame, primary_window: str = "t+1") -> dict:
             }
         pw = grp[primary_window].dropna().astype(float)
         if len(pw):
+            # hit-rate only has meaning for a directional call
             if direction == "bearish":
-                hit = float((pw < 0).mean())
+                stats["hit_rate"] = round(float((pw < 0).mean()) * 100, 1)
             elif direction == "bullish":
-                hit = float((pw > 0).mean())
+                stats["hit_rate"] = round(float((pw > 0).mean()) * 100, 1)
             else:
-                hit = float((pw.abs() > 0).mean())
-            stats["hit_rate"] = round(hit * 100, 1)
+                stats["hit_rate"] = None
             stats["avg_abs"] = round(float(pw.abs().mean()), 2)
         out["by_direction"][direction] = stats
     return out
