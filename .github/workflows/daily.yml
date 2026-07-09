@@ -43,7 +43,12 @@ jobs:
           FYERS_PIN: ${{ secrets.FYERS_PIN }}
           FYERS_TOTP_KEY: ${{ secrets.FYERS_TOTP_KEY }}
         run: |
-          if [ -n "$FYERS_CLIENT_ID" ]; then python auto_login.py; else echo "Fyers not configured — skipping MCX"; fi
+          if [ -n "$FYERS_CLIENT_ID" ]; then
+            python auto_login.py && echo "Fyers login OK — MCX prices will load" \
+              || echo "::warning::Fyers login failed — MCX ₹ prices skipped (dashboard still builds)"
+          else
+            echo "Fyers not configured — skipping MCX"
+          fi
 
       - name: Run Commodity Desk pipeline
         env:
