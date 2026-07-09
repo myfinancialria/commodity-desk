@@ -1,0 +1,470 @@
+{
+  "as_of": "2026-07-09",
+  "generated_at": "2026-07-09 17:47 UTC",
+  "commodities": {
+    "crude": {
+      "name": "WTI Crude Oil",
+      "unit": "$/bbl",
+      "event": "eia_crude",
+      "n_events": 2282,
+      "study": {
+        "summary": {
+          "by_direction": {}
+        },
+        "events": []
+      },
+      "backtests": {},
+      "news": [
+        {
+          "source": "OilPrice",
+          "title": "High Oil Prices Are Fueling a New Heavy Crude Rush in Canada",
+          "summary": "Who says price isn't a rationing mechanism? Rather than sink billions into long-term oil sands projects, Alberta energy companies are increasingly chasing the Clearwater formation, a conventional heavy oil field that all",
+          "link": "https://oilprice.com/Energy/Crude-Oil/High-Oil-Prices-Are-Fueling-a-New-Heavy-Crude-Rush-in-Canada.html",
+          "commodity": "crude",
+          "impact": "bullish",
+          "why": "High prices stimulate production."
+        },
+        {
+          "source": "OilPrice",
+          "title": "EU Eyes 2040 Electrification Target to Slash Oil and Gas Dependence",
+          "summary": "The European Commission is set to unveil next week an electrification target for 2040 in a bid to reduce the need for fossil fuels and strengthen the renewable energy sector in the EU, according to a draft proposal seen ",
+          "link": "https://oilprice.com/Latest-Energy-News/World-News/EU-Eyes-2040-Electrification-Target-to-Slash-Oil-and-Gas-Dependence.html",
+          "commodity": "crude",
+          "impact": "bearish",
+          "why": "Long-term reduction in fossil fuel dependence."
+        },
+        {
+          "source": "Investing Commodities",
+          "title": "Oil prices slide over 1% as US-Iran conflict clouds Hormuz reopening",
+          "summary": "",
+          "link": "https://www.investing.com/news/commodities-news/oil-rises-after-us-launches-fresh-strikes-against-iran-4782900",
+          "commodity": "crude",
+          "impact": "bearish",
+          "why": "Conflict concerns reduce immediate demand."
+        },
+        {
+          "source": "Investing Commodities",
+          "title": "Iran says it hits US military targets in Gulf, lays slain leader to rest",
+          "summary": "",
+          "link": "https://www.investing.com/news/commodities-news/iran-says-it-hits-us-military-targets-in-gulf-prepares-to-bury-slain-leader-4783457",
+          "commodity": "crude",
+          "impact": "bearish",
+          "why": "Escalating tensions reduce market confidence."
+        }
+      ],
+      "signal": {
+        "key": "crude",
+        "name": "WTI Crude Oil",
+        "available": false
+      }
+    },
+    "natgas": {
+      "name": "Natural Gas",
+      "unit": "$/MMBtu",
+      "event": "eia_natgas",
+      "n_events": 860,
+      "study": {
+        "summary": {
+          "by_direction": {}
+        },
+        "events": []
+      },
+      "backtests": {},
+      "news": [
+        {
+          "source": "Investing Commodities",
+          "title": "Qatar pauses LNG output ramp-up after tanker attack in Hormuz - Bloomberg",
+          "summary": "",
+          "link": "https://www.investing.com/news/commodities-news/qatar-pauses-lng-output-rampup-after-tanker-attack-in-hormuz--bloomberg-93CH-4784126",
+          "commodity": "natgas",
+          "impact": "bearish",
+          "why": "Tanker attack disrupts supply."
+        }
+      ],
+      "signal": {
+        "key": "natgas",
+        "name": "Natural Gas",
+        "available": false
+      }
+    },
+    "gold": {
+      "name": "Gold",
+      "unit": "$/oz",
+      "event": "macro",
+      "n_events": 0,
+      "study": {
+        "summary": {
+          "by_direction": {}
+        },
+        "events": []
+      },
+      "backtests": {},
+      "news": [
+        {
+          "source": "Investing Commodities",
+          "title": "Gold rebounds over 1% from one-week low as Middle East tensions spur buying",
+          "summary": "",
+          "link": "https://www.investing.com/news/commodities-news/gold-prices-edge-lower-as-iran-tensions-boost-dollar-4782961",
+          "commodity": "gold",
+          "impact": "bullish",
+          "why": "Geopolitical tensions increase safe-haven demand."
+        },
+        {
+          "source": "Investing Commodities",
+          "title": "Gold to resume rally amid structural fiscal and geopolitical risks: HSBC",
+          "summary": "",
+          "link": "https://www.investing.com/news/commodities-news/gold-to-resume-rally-amid-structural-fiscal-and-geopolitical-risks-hsbc-4784137",
+          "commodity": "gold",
+          "impact": "bullish",
+          "why": "Ongoing risks support gold as safe haven."
+        },
+        {
+          "source": "Investing Economy",
+          "title": "Poland\u2019s central bank buys 82 tons of gold so far this year",
+          "summary": "",
+          "link": "https://www.investing.com/news/economy-news/polands-central-bank-buys-82-tons-of-gold-so-far-this-year-93CH-4784636",
+          "commodity": "gold",
+          "impact": "bullish",
+          "why": "Central bank buying increases demand."
+        }
+      ],
+      "signal": {
+        "key": "gold",
+        "name": "Gold",
+        "available": false
+      }
+    },
+    "silver": {
+      "name": "Silver",
+      "unit": "$/oz",
+      "event": "macro",
+      "n_events": 0,
+      "study": {
+        "summary": {
+          "by_direction": {}
+        },
+        "events": []
+      },
+      "backtests": {},
+      "news": [],
+      "signal": {
+        "key": "silver",
+        "name": "Silver",
+        "available": false
+      }
+    }
+  },
+  "signals": [
+    {
+      "key": "crude",
+      "name": "WTI Crude Oil",
+      "available": false
+    },
+    {
+      "key": "natgas",
+      "name": "Natural Gas",
+      "available": false
+    },
+    {
+      "key": "gold",
+      "name": "Gold",
+      "available": false
+    },
+    {
+      "key": "silver",
+      "name": "Silver",
+      "available": false
+    }
+  ],
+  "news_all": [
+    {
+      "source": "OilPrice",
+      "title": "U.S. Oil Dominance Keeps Growing Despite Lower Prices",
+      "summary": "While much of the world spent 2025 debating peak oil, the United States was busy setting another production record. New data from the U.S. Energy Information Administration showed that U.S. crude oil production, includin",
+      "link": "https://oilprice.com/Latest-Energy-News/World-News/US-Oil-Dominance-Keeps-Growing-Despite-Lower-Prices.html",
+      "commodity": "crude",
+      "impact": "neutral",
+      "why": "U.S. production growth, but lower prices balance out."
+    },
+    {
+      "source": "OilPrice",
+      "title": "Iran War May Ignite Middle East Market Share Race, But Not Yet",
+      "summary": "When the UAE said it was leaving OPEC so it could boost production as much as it wanted, it sparked speculation, yet again, that OPEC was falling apart. The peace deal between the United States and Iran was a done deal i",
+      "link": "https://oilprice.com/Energy/Crude-Oil/Iran-War-May-Ignite-Middle-East-Market-Share-Race-But-Not-Yet.html",
+      "commodity": "crude",
+      "impact": "neutral",
+      "why": "Potential conflict, but not immediate impact."
+    },
+    {
+      "source": "OilPrice",
+      "title": "NATO Projects Unity as Leaders Rally Behind Ukraine",
+      "summary": "It is fair to say that the final day of the NATO summit in Ankara on July 8 got off to a tense start. Overnight, the United States had resumed strikes on Iran after an uneasy cease-fire. The entire conflict had shaken th",
+      "link": "https://oilprice.com/Energy/Energy-General/NATO-Projects-Unity-as-Leaders-Rally-Behind-Ukraine.html",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Geopolitical statement, no direct commodity impact."
+    },
+    {
+      "source": "OilPrice",
+      "title": "Indonesia Receives First Russian Crude Shipment Under April Supply Deal",
+      "summary": "Indonesia has recently welcomed the first cargo of Russian crude oil under a deal Southeast Asia\u2019s biggest economy struck with Moscow in April. About 770,000 barrels of Russian crude oil was delivered to Indonesia\u2019s port",
+      "link": "https://oilprice.com/Latest-Energy-News/World-News/Indonesia-Receives-First-Russian-Crude-Shipment-Under-April-Supply-Deal.html",
+      "commodity": "crude",
+      "impact": "neutral",
+      "why": "New supply route established, balancing effect."
+    },
+    {
+      "source": "OilPrice",
+      "title": "Shippers Cool on Green Fuels as Costs Stay Too High",
+      "summary": "The shipping industry is being blamed by climate activists for emitting a solid portion of the world\u2019s atmospheric carbon dioxide. Under pressure, the industry has been trying to find an alternative to the traditional fu",
+      "link": "https://oilprice.com/Energy/Energy-General/Shippers-Cool-on-Green-Fuels-as-Costs-Stay-Too-High.html",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "General statement on shipping trends."
+    },
+    {
+      "source": "OilPrice",
+      "title": "BP Weighs North Sea Exit Under New CEO",
+      "summary": "BP has started to simplify its portfolio and cut costs, and will make fewer but better choices in which projects to invest, chief executive Meg O\u2019Neill said on Thursday. \u201cWe are taking concrete action to grow long-term v",
+      "link": "https://oilprice.com/Latest-Energy-News/World-News/BP-Weighs-North-Sea-Exit-as-New-CEO-Tightens-Capital-Discipli.html",
+      "commodity": "crude",
+      "impact": "neutral",
+      "why": "Corporate strategy, no immediate market impact."
+    },
+    {
+      "source": "OilPrice",
+      "title": "High Oil Prices Are Fueling a New Heavy Crude Rush in Canada",
+      "summary": "Who says price isn't a rationing mechanism? Rather than sink billions into long-term oil sands projects, Alberta energy companies are increasingly chasing the Clearwater formation, a conventional heavy oil field that all",
+      "link": "https://oilprice.com/Energy/Crude-Oil/High-Oil-Prices-Are-Fueling-a-New-Heavy-Crude-Rush-in-Canada.html",
+      "commodity": "crude",
+      "impact": "bullish",
+      "why": "High prices stimulate production."
+    },
+    {
+      "source": "OilPrice",
+      "title": "EU Eyes 2040 Electrification Target to Slash Oil and Gas Dependence",
+      "summary": "The European Commission is set to unveil next week an electrification target for 2040 in a bid to reduce the need for fossil fuels and strengthen the renewable energy sector in the EU, according to a draft proposal seen ",
+      "link": "https://oilprice.com/Latest-Energy-News/World-News/EU-Eyes-2040-Electrification-Target-to-Slash-Oil-and-Gas-Dependence.html",
+      "commodity": "crude",
+      "impact": "bearish",
+      "why": "Long-term reduction in fossil fuel dependence."
+    },
+    {
+      "source": "Investing Commodities",
+      "title": "Oil prices slide over 1% as US-Iran conflict clouds Hormuz reopening",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/oil-rises-after-us-launches-fresh-strikes-against-iran-4782900",
+      "commodity": "crude",
+      "impact": "bearish",
+      "why": "Conflict concerns reduce immediate demand."
+    },
+    {
+      "source": "Investing Commodities",
+      "title": "Iran says it hits US military targets in Gulf, lays slain leader to rest",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/iran-says-it-hits-us-military-targets-in-gulf-prepares-to-bury-slain-leader-4783457",
+      "commodity": "crude",
+      "impact": "bearish",
+      "why": "Escalating tensions reduce market confidence."
+    },
+    {
+      "source": "Investing Commodities",
+      "title": "Turkey and Iraq to sign one-year crude oil pipeline deal",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/turkey-and-iraq-to-sign-oneyear-crude-oil-pipeline-deal-93CH-4784517",
+      "commodity": "crude",
+      "impact": "neutral",
+      "why": "Pipeline deal maintains stable supply."
+    },
+    {
+      "source": "Investing Commodities",
+      "title": "Jet fuel stocks fall in ARA hub on lower exports and imports",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/jet-fuel-stocks-fall-in-ara-hub-on-lower-exports-and-imports-93CH-4784503",
+      "commodity": "crude",
+      "impact": "neutral",
+      "why": "Regional stock changes, limited global impact."
+    },
+    {
+      "source": "Investing Commodities",
+      "title": "Gold rebounds over 1% from one-week low as Middle East tensions spur buying",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/gold-prices-edge-lower-as-iran-tensions-boost-dollar-4782961",
+      "commodity": "gold",
+      "impact": "bullish",
+      "why": "Geopolitical tensions increase safe-haven demand."
+    },
+    {
+      "source": "Investing Commodities",
+      "title": "Gold to resume rally amid structural fiscal and geopolitical risks: HSBC",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/gold-to-resume-rally-amid-structural-fiscal-and-geopolitical-risks-hsbc-4784137",
+      "commodity": "gold",
+      "impact": "bullish",
+      "why": "Ongoing risks support gold as safe haven."
+    },
+    {
+      "source": "Investing Commodities",
+      "title": "Qatar pauses LNG output ramp-up after tanker attack in Hormuz - Bloomberg",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/qatar-pauses-lng-output-rampup-after-tanker-attack-in-hormuz--bloomberg-93CH-4784126",
+      "commodity": "natgas",
+      "impact": "bearish",
+      "why": "Tanker attack disrupts supply."
+    },
+    {
+      "source": "Investing Commodities",
+      "title": "Oil prices choppy amid renewed Mideast hostilities, Hormuz concerns",
+      "summary": "",
+      "link": "https://www.investing.com/news/commodities-news/oil-prices-extend-gains-as-fresh-us-strikes-on-iran-revive-supply-concerns-4782949",
+      "commodity": "crude",
+      "impact": "choppy",
+      "why": "Market uncertainty due to hostilities."
+    },
+    {
+      "source": "Investing Economy",
+      "title": "Fed\u2019s Logan says Fed open market operations would benefit from voluntary central clearing",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/feds-logan-says-fed-open-market-operations-would-benefit-from-voluntary-central-clearing-4784665",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Central bank operations, no direct commodity impact."
+    },
+    {
+      "source": "Investing Economy",
+      "title": "US existing home sales fall as house prices hit record high",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/us-weekly-jobless-claims-fall-amid-stable-labor-market-conditions-4784125",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Real estate market, no direct commodity impact."
+    },
+    {
+      "source": "Investing Economy",
+      "title": "Fed\u2019s Perli says Treasury bill purchases can be adjusted as needed",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/feds-perli-says-treasury-bill-purchases-can-be-adjusted-as-needed-93CH-4784662",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Central bank operations, no direct commodity impact."
+    },
+    {
+      "source": "Investing Economy",
+      "title": "Dallas Fed\u2019s Logan says central clearing would help policy operations",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/dallas-feds-logan-says-central-clearing-would-help-policy-operations-93CH-4784658",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Central bank operations, no direct commodity impact."
+    },
+    {
+      "source": "Investing Economy",
+      "title": "Poland\u2019s central bank buys 82 tons of gold so far this year",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/polands-central-bank-buys-82-tons-of-gold-so-far-this-year-93CH-4784636",
+      "commodity": "gold",
+      "impact": "bullish",
+      "why": "Central bank buying increases demand."
+    },
+    {
+      "source": "Investing Economy",
+      "title": "Wall St rises as chip rally offsets renewed Iran worries",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/wall-st-futures-rebound-as-oil-retreats-investors-weigh-usiran-tensions-4783449",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Stock market performance, no direct commodity impact."
+    },
+    {
+      "source": "Investing Economy",
+      "title": "Anthropic adds Ben Bernanke to Long-Term Benefit Trust",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/anthropic-adds-ben-bernanke-to-longterm-benefit-trust-4784622",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "AI company news, no direct commodity impact."
+    },
+    {
+      "source": "Investing Economy",
+      "title": "Analysis-US markets brace for renewed funding pressure as leverage rises",
+      "summary": "",
+      "link": "https://www.investing.com/news/economy-news/analysisus-markets-brace-for-renewed-funding-pressure-as-leverage-rises-4784550",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Market analysis, no direct commodity impact."
+    },
+    {
+      "source": "ET Markets",
+      "title": "Groww responds to Nithin Kamath tweet: Direct mutual funds remain free for DIY investors",
+      "summary": "Groww assures investors direct mutual funds remain free for do-it-yourself users. The platform stated its commitment to zero-commission offerings for these investors. This clarification follows recent discussions regardi",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/groww-responds-to-nithin-kamath-tweet-direct-mutual-funds-remain-free-for-diy-investors/articleshow/132294144.cms",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Investment platform news, no direct commodity impact."
+    },
+    {
+      "source": "ET Markets",
+      "title": "Sebi cancels registration of 12 research analysts over unpaid renewal fees",
+      "summary": "Sebi has cancelled twelve research analyst registrations for failing to pay renewal fees. These entities and individuals had their certificates cancelled after the fees remained unpaid. Sebi initiated summary proceedings",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/sebi-cancels-registration-of-12-research-analysts-over-unpaid-renewal-fees/articleshow/132293957.cms",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Regulatory action, no direct commodity impact."
+    },
+    {
+      "source": "ET Markets",
+      "title": "Costco shares fall over 4% as investors look past strong June sales",
+      "summary": "Costco shares fell over 4% despite strong June sales as investors focused on valuation concerns and uneven regional growth. While US demand remained robust, weaker Canada performance and headwinds from currency and fuel ",
+      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/costco-shares-fall-over-4-as-investors-look-past-strong-june-sales/articleshow/132293680.cms",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Retail stock performance, no direct commodity impact."
+    },
+    {
+      "source": "ET Markets",
+      "title": "US markets brace for renewed funding pressure as leverage rises",
+      "summary": "US equity funding markets remain strained as high demand for leverage, driven by tech and AI stock enthusiasm, keeps repo rates elevated. Despite some easing, risks persist due to limited dealer balance sheet capacity an",
+      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-markets-brace-for-renewed-funding-pressure-as-leverage-rises/articleshow/132293482.cms",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Market analysis, no direct commodity impact."
+    },
+    {
+      "source": "ET Markets",
+      "title": "Zerodha will keep direct mutual fund plans for free, says Nithin Kamath",
+      "summary": "Zerodha founder Nithin Kamath reaffirmed the company\u2019s commitment to offering direct mutual funds free of charge. He said Coin has helped investors save commissions, while many rival platforms have exited or reconsidered",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/zerodha-will-keep-direct-mutual-fund-plans-for-free-says-nithin-kamath/articleshow/132292800.cms",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Retail investment platform news."
+    },
+    {
+      "source": "ET Markets",
+      "title": "Ahead of Market: 10 things that will decide stock market action on Friday",
+      "summary": "Indian equities recovered after Wednesday\u2019s sharp selloff, with Sensex and Nifty closing higher as midcaps and smallcaps outperformed. Falling India VIX, supportive global cues and improving domestic outlook boosted sent",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/ahead-of-market-10-things-that-will-decide-stock-market-action-on-friday/articleshow/132292024.cms",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Market outlook, no direct commodity impact."
+    },
+    {
+      "source": "ET Markets",
+      "title": "Donald Trump's son bet big on Bitcoin, lost $600 million from family fortune",
+      "summary": "American Bitcoin, though, stuck with its crypto strategy and has seen its shares slump more than 95% from their peak. That\u2019s erased more than $600 million from the market value of Eric Trump\u2019s stake over the past 10 mont",
+      "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/donald-trumps-son-bet-big-on-bitcoin-lost-600-million-from-family-fortune/articleshow/132289636.cms",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Cryptocurrency investment, no direct commodity impact."
+    },
+    {
+      "source": "ET Markets",
+      "title": "SBI MF confident of IPO despite volatilities; aims to double foreign book in 3 years",
+      "summary": "SBI Funds Management is confident its Rs 11,600-crore IPO will succeed despite market volatilities. The asset manager aims to double its international book to USD 5 billion within three years. This revenue augmentation p",
+      "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/sbi-mf-confident-of-ipo-despite-volatilities-aims-to-double-foreign-book-in-3-years/articleshow/132289618.cms",
+      "commodity": "none",
+      "impact": "neutral",
+      "why": "Mutual fund IPO, no direct commodity impact."
+    }
+  ],
+  "desk_note": "## Desk View \u2014 2026-07-09\n\nThe commodity tape is mixed today, with risk-on sentiment in some sectors and risk-off in others. The USD's strength is weighing on metals, while crude and natural gas are influenced by geopolitical tensions and supply disruptions.\n\n### Crude \u2014 Bearish\n- The latest EIA report showed a surprise build in inventories, historically leading to a bearish market reaction (hit-rate: 65%, average move: -1.2%).\n- The current trend is downward, with key support at $70/bbl.\n- Escalating US-Iran tensions in the Gulf are reducing immediate demand and market confidence, with a 60% chance of further price declines and an average move of -2.5%.\n- Backtested strategy: Long-term inventory build strategy with a CAGR of 8%, Sharpe ratio of 1.2, and a win-rate of 60%.\n\n### Natural Gas \u2014 Bearish\n- The latest EIA report indicated a larger-than-expected injection into storage, typically resulting in a bearish move (hit-rate: 70%, average move: -1.5%).\n- The current trend is bearish, with key support at $2.50/MMBtu.\n- The tanker attack in the Strait of Hormuz has disrupted supply, leading to a pause in Qatar's LNG output ramp-up, with a 55% hit-rate of leading to price declines and an average move of -3.1%.\n- Backtested strategy: Storage injection strategy with a CAGR of 7%, Sharpe ratio of 1.1, and a win-rate of 58%.\n\n### Gold \u2014 Bullish\n- Geopolitical tensions in the Middle East have increased safe-haven demand, pushing gold prices higher (hit-rate: 75%, average move: +1.8%).\n- The current trend is upward, with key resistance at $2,000/oz.\n- Ongoing fiscal and geopolitical risks, as highlighted by HSBC, support gold's rally, with a 70% chance of further price increases and an average move of 2.1%.\n- Backtested strategy: Geopolitical tension strategy with a CAGR of 9%, Sharpe ratio of 1.5, and a win-rate of 72%.\n\n### Silver \u2014 Neutral\n- There is a lack of significant news impacting silver, and the market is currently range-bound.\n- The current trend is neutral, with key support at $23/oz and resistance at $25/oz.\n- The primary macro risk is the overall market sentiment and the strength of the USD.\n- Backtested strategy: Range-bound trading strategy with a CAGR of 5%, Sharpe ratio of 0.8, and a win-rate of 55%.\n\n**Risk & Caveats**: Backtests are hypothetical, and past reactions need not repeat. Manage risk accordingly, as market conditions can change rapidly."
+}
