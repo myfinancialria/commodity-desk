@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-09-09",
-  "generated_at": "2026-09-09 00:11 UTC",
+  "as_of": "2026-09-10",
+  "generated_at": "2026-09-10 00:12 UTC",
   "commodities": {
     "crude": {
       "name": "WTI Crude Oil",
@@ -17,19 +17,19 @@
                 "median": 0.0
               },
               "t+1": {
-                "avg": -0.47,
-                "median": 0.1
+                "avg": -1.39,
+                "median": -1.16
               },
               "t+3": {
-                "avg": -0.14,
-                "median": 0.18
+                "avg": -0.64,
+                "median": -0.52
               },
               "t+5": {
-                "avg": -0.21,
-                "median": 0.28
+                "avg": 1.25,
+                "median": 2.3
               },
-              "hit_rate": 13.6,
-              "avg_abs": 1.12
+              "hit_rate": 85.9,
+              "avg_abs": 1.89
             },
             "bullish": {
               "count": 761,
@@ -38,19 +38,19 @@
                 "median": 0.0
               },
               "t+1": {
-                "avg": 0.05,
-                "median": 0.1
+                "avg": -0.83,
+                "median": -1.16
               },
               "t+3": {
-                "avg": 0.35,
-                "median": 0.18
+                "avg": -0.14,
+                "median": -0.52
               },
               "t+5": {
-                "avg": 0.44,
-                "median": 0.28
+                "avg": 1.85,
+                "median": 2.3
               },
-              "hit_rate": 84.5,
-              "avg_abs": 0.58
+              "hit_rate": 14.5,
+              "avg_abs": 1.33
             },
             "neutral": {
               "count": 784,
@@ -59,19 +59,19 @@
                 "median": 0.0
               },
               "t+1": {
-                "avg": 0.14,
-                "median": 0.1
+                "avg": -0.81,
+                "median": -1.16
               },
               "t+3": {
-                "avg": 0.14,
-                "median": 0.18
+                "avg": -0.39,
+                "median": -0.52
               },
               "t+5": {
-                "avg": 0.18,
-                "median": 0.28
+                "avg": 1.71,
+                "median": 2.3
               },
               "hit_rate": null,
-              "avg_abs": 0.58
+              "avg_abs": 1.38
             }
           },
           "primary_window": "t+1",
@@ -412,9 +412,9 @@
       },
       "backtests": {
         "Trend (20/50 MA)": {
-          "total_return_pct": 130.9,
-          "cagr_pct": 32.3,
-          "sharpe": 0.89,
+          "total_return_pct": 136.9,
+          "cagr_pct": 33.4,
+          "sharpe": 0.91,
           "max_drawdown_pct": -34.3,
           "day_win_rate_pct": 51.1,
           "exposure_pct": 99.9,
@@ -3432,7 +3432,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 2.3088
+              "equity": 2.2707
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 2.3689
             }
           ],
           "recent_trades": [
@@ -3543,11 +3547,11 @@
           ]
         },
         "Donchian breakout (20/10)": {
-          "total_return_pct": 28.3,
-          "cagr_pct": 8.7,
-          "sharpe": 0.41,
+          "total_return_pct": 31.6,
+          "cagr_pct": 9.6,
+          "sharpe": 0.43,
           "max_drawdown_pct": -44.3,
-          "day_win_rate_pct": 50.8,
+          "day_win_rate_pct": 50.9,
           "exposure_pct": 95.1,
           "num_trades": 13,
           "trade_win_rate_pct": 46.2,
@@ -6563,7 +6567,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 1.2831
+              "equity": 1.2619
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.3165
             }
           ],
           "recent_trades": [
@@ -6674,11 +6682,11 @@
           ]
         },
         "MACD (12/26/9)": {
-          "total_return_pct": -80.6,
-          "cagr_pct": -42.3,
-          "sharpe": -1.15,
+          "total_return_pct": -80.1,
+          "cagr_pct": -41.7,
+          "sharpe": -1.12,
           "max_drawdown_pct": -83.6,
-          "day_win_rate_pct": 44.8,
+          "day_win_rate_pct": 44.9,
           "exposure_pct": 99.9,
           "num_trades": 71,
           "trade_win_rate_pct": 25.4,
@@ -9694,7 +9702,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.1939
+              "equity": 0.1907
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.1989
             }
           ],
           "recent_trades": [
@@ -9821,9 +9833,9 @@
           ]
         },
         "Momentum (90d)": {
-          "total_return_pct": -60.2,
-          "cagr_pct": -26.5,
-          "sharpe": -0.55,
+          "total_return_pct": -61.2,
+          "cagr_pct": -27.1,
+          "sharpe": -0.57,
           "max_drawdown_pct": -68.6,
           "day_win_rate_pct": 47.3,
           "exposure_pct": 99.9,
@@ -12841,7 +12853,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.3983
+              "equity": 0.4053
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.3878
             }
           ],
           "recent_trades": [
@@ -12968,9 +12984,9 @@
           ]
         },
         "Keltner breakout (ATR)": {
-          "total_return_pct": -39.2,
-          "cagr_pct": -15.3,
-          "sharpe": -0.21,
+          "total_return_pct": -37.6,
+          "cagr_pct": -14.6,
+          "sharpe": -0.19,
           "max_drawdown_pct": -58.8,
           "day_win_rate_pct": 49.7,
           "exposure_pct": 97.3,
@@ -15988,7 +16004,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.6081
+              "equity": 0.5981
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.624
             }
           ],
           "recent_trades": [
@@ -16067,11 +16087,11 @@
           ]
         },
         "Supertrend (10,3)": {
-          "total_return_pct": 24.5,
-          "cagr_pct": 7.6,
-          "sharpe": 0.39,
+          "total_return_pct": 27.7,
+          "cagr_pct": 8.5,
+          "sharpe": 0.41,
           "max_drawdown_pct": -44.3,
-          "day_win_rate_pct": 50.5,
+          "day_win_rate_pct": 50.6,
           "exposure_pct": 99.9,
           "num_trades": 14,
           "trade_win_rate_pct": 64.3,
@@ -19087,7 +19107,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 1.2449
+              "equity": 1.2244
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.2773
             }
           ],
           "recent_trades": [
@@ -22226,6 +22250,10 @@
             },
             {
               "date": "2026-09-08",
+              "equity": 0.7772
+            },
+            {
+              "date": "2026-09-09",
               "equity": 0.7772
             }
           ],
@@ -25373,6 +25401,10 @@
             },
             {
               "date": "2026-09-08",
+              "equity": 0.907
+            },
+            {
+              "date": "2026-09-09",
               "equity": 0.9068
             }
           ],
@@ -25500,9 +25532,9 @@
           ]
         },
         "Seasonality (month bias)": {
-          "total_return_pct": -21.8,
-          "cagr_pct": -7.9,
-          "sharpe": -0.0,
+          "total_return_pct": -19.8,
+          "cagr_pct": -7.1,
+          "sharpe": 0.02,
           "max_drawdown_pct": -51.7,
           "day_win_rate_pct": 48.7,
           "exposure_pct": 99.9,
@@ -28520,7 +28552,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.7816
+              "equity": 0.7687
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.802
             }
           ],
           "recent_trades": [
@@ -31667,6 +31703,10 @@
             },
             {
               "date": "2026-09-08",
+              "equity": 0.5292
+            },
+            {
+              "date": "2026-09-09",
               "equity": 0.5292
             }
           ],
@@ -34815,6 +34855,10 @@
             {
               "date": "2026-09-08",
               "equity": 0.6195
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.6195
             }
           ],
           "recent_trades": [
@@ -35134,12 +35178,12 @@
         "name": "WTI Crude Oil",
         "unit": "$/bbl",
         "available": true,
-        "last": 94.59,
-        "verdict": "Bullish",
-        "conviction": 2,
+        "last": 97.05,
+        "verdict": "Neutral",
+        "conviction": 1,
         "trend": "up",
-        "ma20": 86.06,
-        "ma50": 81.46,
+        "ma20": 86.67,
+        "ma50": 81.96,
         "latest_event": {
           "date": "2026-08-28",
           "actual": 424460.0,
@@ -35151,11 +35195,11 @@
         },
         "event_edge": {
           "direction": "bullish",
-          "hit_rate": 84.5,
+          "hit_rate": 14.5,
           "count": 761,
           "t+1": {
-            "avg": 0.05,
-            "median": 0.1
+            "avg": -0.83,
+            "median": -1.16
           }
         },
         "news_tilt": "neutral",
@@ -35164,29 +35208,29 @@
           "bearish": 0
         },
         "levels": {
-          "entry": 94.59,
-          "stop": 89.48,
-          "target": 104.81
+          "entry": 97.05,
+          "stop": null,
+          "target": null
         },
         "leans_on_strategy": "Trend (20/50 MA)",
         "leans_on_stats": {
-          "cagr_pct": 32.3,
-          "sharpe": 0.89,
+          "cagr_pct": 33.4,
+          "sharpe": 0.91,
           "max_drawdown_pct": -34.3,
           "trade_win_rate_pct": 76.9
         },
-        "rationale": "Bullish: trend is up; latest report skews bullish and that has an edge historically.",
+        "rationale": "Neutral: trend is up.",
         "mcx": {
           "symbol": "MCX:CRUDEOIL26SEPFUT",
           "unit": "\u20b9/bbl",
-          "lp": 8734.0,
-          "chp": -0.3
+          "lp": 9118.0,
+          "chp": 4.4
         },
         "levels_inr": {
           "unit": "\u20b9/bbl",
-          "entry": 8734.0,
-          "stop": 8262.17,
-          "target": 9677.67
+          "entry": 9118.0,
+          "stop": null,
+          "target": null
         }
       }
     },
@@ -35205,19 +35249,19 @@
                 "median": 0.0
               },
               "t+1": {
-                "avg": 1.07,
-                "median": 2.79
+                "avg": -0.12,
+                "median": -0.75
               },
               "t+3": {
-                "avg": -0.38,
-                "median": -1.37
+                "avg": -0.99,
+                "median": -3.19
               },
               "t+5": {
-                "avg": 0.56,
-                "median": 1.42
+                "avg": 0.18,
+                "median": 0.28
               },
-              "hit_rate": 33.3,
-              "avg_abs": 3.61
+              "hit_rate": 67.0,
+              "avg_abs": 2.92
             },
             "bullish": {
               "count": 242,
@@ -35226,19 +35270,19 @@
                 "median": 0.0
               },
               "t+1": {
-                "avg": 0.43,
-                "median": 1.98
+                "avg": -0.7,
+                "median": -0.75
               },
               "t+3": {
-                "avg": -0.64,
-                "median": -1.37
+                "avg": -1.22,
+                "median": -3.19
               },
               "t+5": {
-                "avg": 0.25,
-                "median": 1.42
+                "avg": -0.11,
+                "median": 0.28
               },
-              "hit_rate": 60.7,
-              "avg_abs": 3.4
+              "hit_rate": 28.9,
+              "avg_abs": 2.75
             },
             "neutral": {
               "count": 359,
@@ -35247,19 +35291,19 @@
                 "median": 0.0
               },
               "t+1": {
-                "avg": 0.92,
-                "median": 1.62
+                "avg": 0.16,
+                "median": -0.75
               },
               "t+3": {
-                "avg": 0.6,
+                "avg": 0.21,
                 "median": -1.09
               },
               "t+5": {
-                "avg": 1.29,
-                "median": 1.42
+                "avg": 1.05,
+                "median": 0.28
               },
               "hit_rate": null,
-              "avg_abs": 3.23
+              "avg_abs": 2.79
             }
           },
           "primary_window": "t+1",
@@ -35600,11 +35644,11 @@
       },
       "backtests": {
         "Trend (20/50 MA)": {
-          "total_return_pct": -37.5,
-          "cagr_pct": -14.5,
-          "sharpe": 0.19,
+          "total_return_pct": -35.5,
+          "cagr_pct": -13.6,
+          "sharpe": 0.21,
           "max_drawdown_pct": -75.6,
-          "day_win_rate_pct": 49.8,
+          "day_win_rate_pct": 49.9,
           "exposure_pct": 99.9,
           "num_trades": 18,
           "trade_win_rate_pct": 44.4,
@@ -38624,7 +38668,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.6252
+              "equity": 0.6225
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.6454
             }
           ],
           "recent_trades": [
@@ -38751,9 +38799,9 @@
           ]
         },
         "Donchian breakout (20/10)": {
-          "total_return_pct": -90.9,
-          "cagr_pct": -55.1,
-          "sharpe": -0.59,
+          "total_return_pct": -91.2,
+          "cagr_pct": -55.6,
+          "sharpe": -0.6,
           "max_drawdown_pct": -92.2,
           "day_win_rate_pct": 49.2,
           "exposure_pct": 97.2,
@@ -41775,7 +41823,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.0909
+              "equity": 0.0913
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.088
             }
           ],
           "recent_trades": [
@@ -41902,9 +41954,9 @@
           ]
         },
         "MACD (12/26/9)": {
-          "total_return_pct": -57.2,
-          "cagr_pct": -24.7,
-          "sharpe": 0.07,
+          "total_return_pct": -58.6,
+          "cagr_pct": -25.5,
+          "sharpe": 0.05,
           "max_drawdown_pct": -84.3,
           "day_win_rate_pct": 51.1,
           "exposure_pct": 99.9,
@@ -44926,7 +44978,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.428
+              "equity": 0.4299
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.4141
             }
           ],
           "recent_trades": [
@@ -45053,11 +45109,11 @@
           ]
         },
         "Momentum (90d)": {
-          "total_return_pct": -92.2,
-          "cagr_pct": -57.4,
-          "sharpe": -0.65,
+          "total_return_pct": -92.4,
+          "cagr_pct": -57.8,
+          "sharpe": -0.66,
           "max_drawdown_pct": -93.9,
-          "day_win_rate_pct": 49.3,
+          "day_win_rate_pct": 49.2,
           "exposure_pct": 99.9,
           "num_trades": 43,
           "trade_win_rate_pct": 32.6,
@@ -48077,7 +48133,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.0781
+              "equity": 0.0784
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.0756
             }
           ],
           "recent_trades": [
@@ -48204,12 +48264,12 @@
           ]
         },
         "Keltner breakout (ATR)": {
-          "total_return_pct": -96.1,
-          "cagr_pct": -66.2,
-          "sharpe": -0.95,
+          "total_return_pct": -96.0,
+          "cagr_pct": -65.8,
+          "sharpe": -0.94,
           "max_drawdown_pct": -96.4,
           "day_win_rate_pct": 49.5,
-          "exposure_pct": 97.3,
+          "exposure_pct": 97.4,
           "num_trades": 13,
           "trade_win_rate_pct": 23.1,
           "avg_trade_pct": -16.74,
@@ -51228,7 +51288,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.039
+              "equity": 0.0388
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.0402
             }
           ],
           "recent_trades": [
@@ -51339,11 +51403,11 @@
           ]
         },
         "Supertrend (10,3)": {
-          "total_return_pct": -32.6,
-          "cagr_pct": -12.3,
-          "sharpe": 0.25,
+          "total_return_pct": -34.8,
+          "cagr_pct": -13.3,
+          "sharpe": 0.24,
           "max_drawdown_pct": -65.0,
-          "day_win_rate_pct": 49.8,
+          "day_win_rate_pct": 49.7,
           "exposure_pct": 99.9,
           "num_trades": 24,
           "trade_win_rate_pct": 58.3,
@@ -54363,7 +54427,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.6743
+              "equity": 0.6773
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.6525
             }
           ],
           "recent_trades": [
@@ -57514,6 +57582,10 @@
             },
             {
               "date": "2026-09-08",
+              "equity": 1.0003
+            },
+            {
+              "date": "2026-09-09",
               "equity": 1.0003
             }
           ],
@@ -60666,6 +60738,10 @@
             {
               "date": "2026-09-08",
               "equity": 1.8594
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.8594
             }
           ],
           "recent_trades": [
@@ -60792,11 +60868,11 @@
           ]
         },
         "Seasonality (month bias)": {
-          "total_return_pct": -71.5,
-          "cagr_pct": -34.2,
-          "sharpe": -0.1,
+          "total_return_pct": -72.4,
+          "cagr_pct": -34.9,
+          "sharpe": -0.11,
           "max_drawdown_pct": -89.1,
-          "day_win_rate_pct": 51.3,
+          "day_win_rate_pct": 51.2,
           "exposure_pct": 99.9,
           "num_trades": 76,
           "trade_win_rate_pct": 39.5,
@@ -63816,7 +63892,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.2855
+              "equity": 0.2867
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.2762
             }
           ],
           "recent_trades": [
@@ -66968,6 +67048,10 @@
             {
               "date": "2026-09-08",
               "equity": 0.3027
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.3027
             }
           ],
           "recent_trades": [
@@ -67095,7 +67179,7 @@
         },
         "Event + Trend filter": {
           "total_return_pct": -24.2,
-          "cagr_pct": -8.9,
+          "cagr_pct": -8.8,
           "sharpe": -0.23,
           "max_drawdown_pct": -40.0,
           "day_win_rate_pct": 51.1,
@@ -70119,6 +70203,10 @@
             {
               "date": "2026-09-08",
               "equity": 0.7577
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.7577
             }
           ],
           "recent_trades": [
@@ -70763,12 +70851,12 @@
         "name": "Natural Gas",
         "unit": "$/MMBtu",
         "available": true,
-        "last": 2.9,
+        "last": 2.81,
         "verdict": "Neutral",
         "conviction": 1,
         "trend": "down",
         "ma20": 2.83,
-        "ma50": 2.88,
+        "ma50": 2.87,
         "latest_event": {
           "date": "2026-08-28",
           "actual": 3214.0,
@@ -70783,8 +70871,8 @@
           "hit_rate": null,
           "count": 359,
           "t+1": {
-            "avg": 0.92,
-            "median": 1.62
+            "avg": 0.16,
+            "median": -0.75
           }
         },
         "news_tilt": "neutral",
@@ -70793,7 +70881,7 @@
           "bearish": 0
         },
         "levels": {
-          "entry": 2.9,
+          "entry": 2.81,
           "stop": null,
           "target": null
         },
@@ -70808,12 +70896,12 @@
         "mcx": {
           "symbol": "MCX:NATURALGAS26SEPFUT",
           "unit": "\u20b9/MMBtu",
-          "lp": 274.4,
-          "chp": -2.42
+          "lp": 269.2,
+          "chp": -1.86
         },
         "levels_inr": {
           "unit": "\u20b9/MMBtu",
-          "entry": 274.4,
+          "entry": 269.2,
           "stop": null,
           "target": null
         }
@@ -70823,7 +70911,7 @@
       "name": "Gold",
       "unit": "$/oz",
       "event": "macro",
-      "n_events": 573,
+      "n_events": 572,
       "study": {
         "summary": {
           "by_direction": {
@@ -70849,7 +70937,7 @@
               "avg_abs": 0.8
             },
             "bullish": {
-              "count": 281,
+              "count": 280,
               "t0": {
                 "avg": 0.0,
                 "median": 0.0
@@ -70860,7 +70948,7 @@
               },
               "t+3": {
                 "avg": 0.07,
-                "median": 0.15
+                "median": 0.14
               },
               "t+5": {
                 "avg": 0.22,
@@ -70871,9 +70959,20 @@
             }
           },
           "primary_window": "t+1",
-          "n": 573
+          "n": 572
         },
         "events": [
+          {
+            "date": "2025-12-11",
+            "direction": "bullish",
+            "surprise": -0.45,
+            "actual": 98.35,
+            "expected": 0.0,
+            "t0": 0.0,
+            "t+1": 0.34,
+            "t+3": 0.44,
+            "t+5": 1.26
+          },
           {
             "date": "2025-12-23",
             "direction": "bullish",
@@ -71190,29 +71289,18 @@
             "expected": 0.0,
             "t0": 0.0,
             "t+1": -1.38,
-            "t+3": NaN,
-            "t+5": NaN
-          },
-          {
-            "date": "2026-09-08",
-            "direction": "bullish",
-            "surprise": -0.39,
-            "actual": 98.77,
-            "expected": 0.0,
-            "t0": 0.0,
-            "t+1": NaN,
-            "t+3": NaN,
+            "t+3": -1.27,
             "t+5": NaN
           }
         ]
       },
       "backtests": {
         "Trend (20/50 MA)": {
-          "total_return_pct": 55.4,
-          "cagr_pct": 15.9,
-          "sharpe": 0.8,
+          "total_return_pct": 56.9,
+          "cagr_pct": 16.2,
+          "sharpe": 0.81,
           "max_drawdown_pct": -26.2,
-          "day_win_rate_pct": 54.5,
+          "day_win_rate_pct": 54.6,
           "exposure_pct": 99.9,
           "num_trades": 11,
           "trade_win_rate_pct": 45.5,
@@ -74228,7 +74316,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 1.5537
+              "equity": 1.5547
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.5691
             }
           ],
           "recent_trades": [
@@ -74323,11 +74415,11 @@
           ]
         },
         "Donchian breakout (20/10)": {
-          "total_return_pct": 47.3,
-          "cagr_pct": 13.8,
-          "sharpe": 0.72,
+          "total_return_pct": 48.8,
+          "cagr_pct": 14.2,
+          "sharpe": 0.73,
           "max_drawdown_pct": -25.6,
-          "day_win_rate_pct": 54.6,
+          "day_win_rate_pct": 54.7,
           "exposure_pct": 96.3,
           "num_trades": 12,
           "trade_win_rate_pct": 50.0,
@@ -77343,7 +77435,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 1.473
+              "equity": 1.4739
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.4876
             }
           ],
           "recent_trades": [
@@ -77446,11 +77542,11 @@
           ]
         },
         "MACD (12/26/9)": {
-          "total_return_pct": -22.0,
-          "cagr_pct": -8.0,
-          "sharpe": -0.28,
+          "total_return_pct": -22.8,
+          "cagr_pct": -8.3,
+          "sharpe": -0.29,
           "max_drawdown_pct": -36.6,
-          "day_win_rate_pct": 50.4,
+          "day_win_rate_pct": 50.3,
           "exposure_pct": 99.9,
           "num_trades": 64,
           "trade_win_rate_pct": 35.9,
@@ -80466,7 +80562,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.7801
+              "equity": 0.7796
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.7723
             }
           ],
           "recent_trades": [
@@ -80593,11 +80693,11 @@
           ]
         },
         "Momentum (90d)": {
-          "total_return_pct": 110.6,
-          "cagr_pct": 28.3,
-          "sharpe": 1.27,
+          "total_return_pct": 108.5,
+          "cagr_pct": 27.8,
+          "sharpe": 1.26,
           "max_drawdown_pct": -17.8,
-          "day_win_rate_pct": 56.1,
+          "day_win_rate_pct": 56.0,
           "exposure_pct": 99.9,
           "num_trades": 4,
           "trade_win_rate_pct": 50.0,
@@ -83613,7 +83713,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 2.1059
+              "equity": 2.1046
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 2.085
             }
           ],
           "recent_trades": [
@@ -83652,9 +83756,9 @@
           ]
         },
         "Keltner breakout (ATR)": {
-          "total_return_pct": 124.5,
-          "cagr_pct": 31.1,
-          "sharpe": 1.38,
+          "total_return_pct": 126.7,
+          "cagr_pct": 31.5,
+          "sharpe": 1.39,
           "max_drawdown_pct": -18.8,
           "day_win_rate_pct": 56.1,
           "exposure_pct": 97.3,
@@ -86672,7 +86776,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 2.245
+              "equity": 2.2464
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 2.2673
             }
           ],
           "recent_trades": [
@@ -86719,11 +86827,11 @@
           ]
         },
         "Supertrend (10,3)": {
-          "total_return_pct": -8.4,
-          "cagr_pct": -2.9,
-          "sharpe": -0.03,
+          "total_return_pct": -9.3,
+          "cagr_pct": -3.2,
+          "sharpe": -0.04,
           "max_drawdown_pct": -24.0,
-          "day_win_rate_pct": 52.8,
+          "day_win_rate_pct": 52.7,
           "exposure_pct": 99.9,
           "num_trades": 31,
           "trade_win_rate_pct": 32.3,
@@ -89739,7 +89847,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.9156
+              "equity": 0.915
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.9065
             }
           ],
           "recent_trades": [
@@ -92887,6 +92999,10 @@
             {
               "date": "2026-09-08",
               "equity": 1.0763
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.0763
             }
           ],
           "recent_trades": [
@@ -93018,7 +93134,7 @@
           "sharpe": -0.72,
           "max_drawdown_pct": -21.2,
           "day_win_rate_pct": 35.5,
-          "exposure_pct": 12.4,
+          "exposure_pct": 12.3,
           "num_trades": 42,
           "trade_win_rate_pct": 45.2,
           "avg_trade_pct": -0.41,
@@ -96034,6 +96150,10 @@
             {
               "date": "2026-09-08",
               "equity": 0.8215
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.8215
             }
           ],
           "recent_trades": [
@@ -96160,9 +96280,9 @@
           ]
         },
         "Seasonality (month bias)": {
-          "total_return_pct": 10.4,
-          "cagr_pct": 3.4,
-          "sharpe": 0.26,
+          "total_return_pct": 11.5,
+          "cagr_pct": 3.7,
+          "sharpe": 0.28,
           "max_drawdown_pct": -32.7,
           "day_win_rate_pct": 53.1,
           "exposure_pct": 99.9,
@@ -99180,7 +99300,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 1.1042
+              "equity": 1.1049
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.1152
             }
           ],
           "recent_trades": [
@@ -99312,7 +99436,7 @@
           "sharpe": 0.03,
           "max_drawdown_pct": -18.5,
           "day_win_rate_pct": 48.1,
-          "exposure_pct": 17.7,
+          "exposure_pct": 17.6,
           "num_trades": 116,
           "trade_win_rate_pct": 46.6,
           "avg_trade_pct": 0.05,
@@ -102327,7 +102451,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.9963
+              "equity": 0.9965
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.9965
             }
           ],
           "recent_trades": [
@@ -105474,7 +105602,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 1.1611
+              "equity": 1.1613
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.1613
             }
           ],
           "recent_trades": [
@@ -105690,17 +105822,17 @@
         "name": "Gold",
         "unit": "$/oz",
         "available": true,
-        "last": 4391.2,
+        "last": 4434.8,
         "verdict": "Bullish",
         "conviction": 2,
         "trend": "up",
-        "ma20": 4468.62,
-        "ma50": 4245.23,
+        "ma20": 4471.35,
+        "ma50": 4253.54,
         "latest_event": {
-          "date": "2026-09-08",
-          "surprise": -0.39,
-          "z": -1.31,
-          "actual": 98.77,
+          "date": "2026-09-03",
+          "surprise": -0.56,
+          "z": -1.91,
+          "actual": 99.0,
           "expected": 0.0,
           "direction": "bullish",
           "driver": "USD/rates (DXY move)"
@@ -105708,7 +105840,7 @@
         "event_edge": {
           "direction": "bullish",
           "hit_rate": 56.1,
-          "count": 281,
+          "count": 280,
           "t+1": {
             "avg": 0.14,
             "median": 0.14
@@ -105720,14 +105852,14 @@
           "bearish": 0
         },
         "levels": {
-          "entry": 4391.2,
-          "stop": 4268.26,
-          "target": 4637.07
+          "entry": 4434.8,
+          "stop": 4326.26,
+          "target": 4651.87
         },
         "leans_on_strategy": "Keltner breakout (ATR)",
         "leans_on_stats": {
-          "cagr_pct": 31.1,
-          "sharpe": 1.38,
+          "cagr_pct": 31.5,
+          "sharpe": 1.39,
           "max_drawdown_pct": -18.8,
           "trade_win_rate_pct": 60.0
         },
@@ -105735,14 +105867,14 @@
         "mcx": {
           "symbol": "MCX:GOLD26OCTFUT",
           "unit": "\u20b9/10g",
-          "lp": 152605.0,
-          "chp": -0.14
+          "lp": 153721.0,
+          "chp": 0.75
         },
         "levels_inr": {
           "unit": "\u20b9/10g",
-          "entry": 152605.0,
-          "stop": 148332.53,
-          "target": 161149.59
+          "entry": 153721.0,
+          "stop": 149958.74,
+          "target": 161245.18
         }
       }
     },
@@ -105750,7 +105882,7 @@
       "name": "Silver",
       "unit": "$/oz",
       "event": "macro",
-      "n_events": 573,
+      "n_events": 572,
       "study": {
         "summary": {
           "by_direction": {
@@ -105776,7 +105908,7 @@
               "avg_abs": 1.55
             },
             "bullish": {
-              "count": 281,
+              "count": 280,
               "t0": {
                 "avg": 0.0,
                 "median": 0.0
@@ -105786,8 +105918,8 @@
                 "median": 0.07
               },
               "t+3": {
-                "avg": -0.13,
-                "median": -0.31
+                "avg": -0.12,
+                "median": -0.3
               },
               "t+5": {
                 "avg": -0.04,
@@ -105798,9 +105930,20 @@
             }
           },
           "primary_window": "t+1",
-          "n": 573
+          "n": 572
         },
         "events": [
+          {
+            "date": "2025-12-11",
+            "direction": "bullish",
+            "surprise": -0.45,
+            "actual": 98.35,
+            "expected": 0.0,
+            "t0": 0.0,
+            "t+1": -4.02,
+            "t+3": -1.92,
+            "t+5": 1.04
+          },
           {
             "date": "2025-12-23",
             "direction": "bullish",
@@ -106117,27 +106260,16 @@
             "expected": 0.0,
             "t0": 0.0,
             "t+1": -1.38,
-            "t+3": NaN,
-            "t+5": NaN
-          },
-          {
-            "date": "2026-09-08",
-            "direction": "bullish",
-            "surprise": -0.39,
-            "actual": 98.77,
-            "expected": 0.0,
-            "t0": 0.0,
-            "t+1": NaN,
-            "t+3": NaN,
+            "t+3": 1.26,
             "t+5": NaN
           }
         ]
       },
       "backtests": {
         "Trend (20/50 MA)": {
-          "total_return_pct": 90.1,
-          "cagr_pct": 24.0,
-          "sharpe": 0.71,
+          "total_return_pct": 94.7,
+          "cagr_pct": 24.9,
+          "sharpe": 0.73,
           "max_drawdown_pct": -46.5,
           "day_win_rate_pct": 52.3,
           "exposure_pct": 99.9,
@@ -109155,7 +109287,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 1.9012
+              "equity": 1.9029
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.9466
             }
           ],
           "recent_trades": [
@@ -109266,11 +109402,11 @@
           ]
         },
         "Donchian breakout (20/10)": {
-          "total_return_pct": -10.0,
-          "cagr_pct": -3.5,
-          "sharpe": 0.15,
+          "total_return_pct": -7.9,
+          "cagr_pct": -2.7,
+          "sharpe": 0.17,
           "max_drawdown_pct": -57.3,
-          "day_win_rate_pct": 50.0,
+          "day_win_rate_pct": 50.1,
           "exposure_pct": 94.0,
           "num_trades": 17,
           "trade_win_rate_pct": 23.5,
@@ -112286,7 +112422,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.8999
+              "equity": 0.9007
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.9214
             }
           ],
           "recent_trades": [
@@ -112413,11 +112553,11 @@
           ]
         },
         "MACD (12/26/9)": {
-          "total_return_pct": -48.0,
-          "cagr_pct": -19.6,
-          "sharpe": -0.25,
+          "total_return_pct": -49.2,
+          "cagr_pct": -20.3,
+          "sharpe": -0.27,
           "max_drawdown_pct": -62.1,
-          "day_win_rate_pct": 46.8,
+          "day_win_rate_pct": 46.7,
           "exposure_pct": 99.9,
           "num_trades": 68,
           "trade_win_rate_pct": 25.0,
@@ -115433,7 +115573,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.5202
+              "equity": 0.5198
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.5078
             }
           ],
           "recent_trades": [
@@ -115560,11 +115704,11 @@
           ]
         },
         "Momentum (90d)": {
-          "total_return_pct": 106.9,
-          "cagr_pct": 27.5,
-          "sharpe": 0.78,
+          "total_return_pct": 102.0,
+          "cagr_pct": 26.5,
+          "sharpe": 0.76,
           "max_drawdown_pct": -45.9,
-          "day_win_rate_pct": 54.4,
+          "day_win_rate_pct": 54.3,
           "exposure_pct": 99.9,
           "num_trades": 32,
           "trade_win_rate_pct": 50.0,
@@ -118580,7 +118724,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 2.0689
+              "equity": 2.0672
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 2.0197
             }
           ],
           "recent_trades": [
@@ -118707,9 +118855,9 @@
           ]
         },
         "Keltner breakout (ATR)": {
-          "total_return_pct": 23.2,
-          "cagr_pct": 7.2,
-          "sharpe": 0.39,
+          "total_return_pct": 26.2,
+          "cagr_pct": 8.1,
+          "sharpe": 0.41,
           "max_drawdown_pct": -61.6,
           "day_win_rate_pct": 52.3,
           "exposure_pct": 93.5,
@@ -121727,7 +121875,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 1.2321
+              "equity": 1.2332
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.2615
             }
           ],
           "recent_trades": [
@@ -121830,11 +121982,11 @@
           ]
         },
         "Supertrend (10,3)": {
-          "total_return_pct": -50.7,
-          "cagr_pct": -21.1,
-          "sharpe": -0.29,
+          "total_return_pct": -49.6,
+          "cagr_pct": -20.5,
+          "sharpe": -0.27,
           "max_drawdown_pct": -56.6,
-          "day_win_rate_pct": 47.6,
+          "day_win_rate_pct": 47.7,
           "exposure_pct": 99.9,
           "num_trades": 40,
           "trade_win_rate_pct": 25.0,
@@ -124850,7 +125002,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.4926
+              "equity": 0.493
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.5043
             }
           ],
           "recent_trades": [
@@ -127997,6 +128153,10 @@
             },
             {
               "date": "2026-09-08",
+              "equity": 1.2785
+            },
+            {
+              "date": "2026-09-09",
               "equity": 1.2785
             }
           ],
@@ -131145,6 +131305,10 @@
             {
               "date": "2026-09-08",
               "equity": 1.3038
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.3038
             }
           ],
           "recent_trades": [
@@ -131271,11 +131435,11 @@
           ]
         },
         "Seasonality (month bias)": {
-          "total_return_pct": -29.1,
-          "cagr_pct": -10.9,
-          "sharpe": -0.02,
+          "total_return_pct": -27.4,
+          "cagr_pct": -10.2,
+          "sharpe": -0.0,
           "max_drawdown_pct": -71.3,
-          "day_win_rate_pct": 50.9,
+          "day_win_rate_pct": 51.0,
           "exposure_pct": 99.9,
           "num_trades": 82,
           "trade_win_rate_pct": 37.8,
@@ -134291,7 +134455,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 0.7088
+              "equity": 0.7094
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 0.7257
             }
           ],
           "recent_trades": [
@@ -134423,7 +134591,7 @@
           "sharpe": 0.1,
           "max_drawdown_pct": -36.4,
           "day_win_rate_pct": 48.1,
-          "exposure_pct": 17.7,
+          "exposure_pct": 17.6,
           "num_trades": 116,
           "trade_win_rate_pct": 45.7,
           "avg_trade_pct": 0.09,
@@ -137438,7 +137606,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 1.0017
+              "equity": 1.0019
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.0019
             }
           ],
           "recent_trades": [
@@ -140585,7 +140757,11 @@
             },
             {
               "date": "2026-09-08",
-              "equity": 1.1001
+              "equity": 1.1003
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 1.1003
             }
           ],
           "recent_trades": [
@@ -141152,17 +141328,17 @@
         "name": "Silver",
         "unit": "$/oz",
         "available": true,
-        "last": 66.24,
+        "last": 67.82,
         "verdict": "Neutral",
         "conviction": 1,
         "trend": "up",
-        "ma20": 66.49,
-        "ma50": 62.14,
+        "ma20": 66.65,
+        "ma50": 62.33,
         "latest_event": {
-          "date": "2026-09-08",
-          "surprise": -0.39,
-          "z": -1.31,
-          "actual": 98.77,
+          "date": "2026-09-03",
+          "surprise": -0.56,
+          "z": -1.91,
+          "actual": 99.0,
           "expected": 0.0,
           "direction": "bullish",
           "driver": "USD/rates (DXY move)"
@@ -141170,7 +141346,7 @@
         "event_edge": {
           "direction": "bullish",
           "hit_rate": 52.5,
-          "count": 281,
+          "count": 280,
           "t+1": {
             "avg": 0.14,
             "median": 0.07
@@ -141182,14 +141358,14 @@
           "bearish": 0
         },
         "levels": {
-          "entry": 66.24,
+          "entry": 67.82,
           "stop": null,
           "target": null
         },
         "leans_on_strategy": "Momentum (90d)",
         "leans_on_stats": {
-          "cagr_pct": 27.5,
-          "sharpe": 0.78,
+          "cagr_pct": 26.5,
+          "sharpe": 0.76,
           "max_drawdown_pct": -45.9,
           "trade_win_rate_pct": 50.0
         },
@@ -141197,12 +141373,12 @@
         "mcx": {
           "symbol": "MCX:SILVER26DECFUT",
           "unit": "\u20b9/kg",
-          "lp": 239425.0,
-          "chp": 0.17
+          "lp": 244300.0,
+          "chp": 2.04
         },
         "levels_inr": {
           "unit": "\u20b9/kg",
-          "entry": 239425.0,
+          "entry": 244300.0,
           "stop": null,
           "target": null
         }
@@ -141215,12 +141391,12 @@
       "name": "WTI Crude Oil",
       "unit": "$/bbl",
       "available": true,
-      "last": 94.59,
-      "verdict": "Bullish",
-      "conviction": 2,
+      "last": 97.05,
+      "verdict": "Neutral",
+      "conviction": 1,
       "trend": "up",
-      "ma20": 86.06,
-      "ma50": 81.46,
+      "ma20": 86.67,
+      "ma50": 81.96,
       "latest_event": {
         "date": "2026-08-28",
         "actual": 424460.0,
@@ -141232,11 +141408,11 @@
       },
       "event_edge": {
         "direction": "bullish",
-        "hit_rate": 84.5,
+        "hit_rate": 14.5,
         "count": 761,
         "t+1": {
-          "avg": 0.05,
-          "median": 0.1
+          "avg": -0.83,
+          "median": -1.16
         }
       },
       "news_tilt": "neutral",
@@ -141245,29 +141421,29 @@
         "bearish": 0
       },
       "levels": {
-        "entry": 94.59,
-        "stop": 89.48,
-        "target": 104.81
+        "entry": 97.05,
+        "stop": null,
+        "target": null
       },
       "leans_on_strategy": "Trend (20/50 MA)",
       "leans_on_stats": {
-        "cagr_pct": 32.3,
-        "sharpe": 0.89,
+        "cagr_pct": 33.4,
+        "sharpe": 0.91,
         "max_drawdown_pct": -34.3,
         "trade_win_rate_pct": 76.9
       },
-      "rationale": "Bullish: trend is up; latest report skews bullish and that has an edge historically.",
+      "rationale": "Neutral: trend is up.",
       "mcx": {
         "symbol": "MCX:CRUDEOIL26SEPFUT",
         "unit": "\u20b9/bbl",
-        "lp": 8734.0,
-        "chp": -0.3
+        "lp": 9118.0,
+        "chp": 4.4
       },
       "levels_inr": {
         "unit": "\u20b9/bbl",
-        "entry": 8734.0,
-        "stop": 8262.17,
-        "target": 9677.67
+        "entry": 9118.0,
+        "stop": null,
+        "target": null
       }
     },
     {
@@ -141275,12 +141451,12 @@
       "name": "Natural Gas",
       "unit": "$/MMBtu",
       "available": true,
-      "last": 2.9,
+      "last": 2.81,
       "verdict": "Neutral",
       "conviction": 1,
       "trend": "down",
       "ma20": 2.83,
-      "ma50": 2.88,
+      "ma50": 2.87,
       "latest_event": {
         "date": "2026-08-28",
         "actual": 3214.0,
@@ -141295,8 +141471,8 @@
         "hit_rate": null,
         "count": 359,
         "t+1": {
-          "avg": 0.92,
-          "median": 1.62
+          "avg": 0.16,
+          "median": -0.75
         }
       },
       "news_tilt": "neutral",
@@ -141305,7 +141481,7 @@
         "bearish": 0
       },
       "levels": {
-        "entry": 2.9,
+        "entry": 2.81,
         "stop": null,
         "target": null
       },
@@ -141320,12 +141496,12 @@
       "mcx": {
         "symbol": "MCX:NATURALGAS26SEPFUT",
         "unit": "\u20b9/MMBtu",
-        "lp": 274.4,
-        "chp": -2.42
+        "lp": 269.2,
+        "chp": -1.86
       },
       "levels_inr": {
         "unit": "\u20b9/MMBtu",
-        "entry": 274.4,
+        "entry": 269.2,
         "stop": null,
         "target": null
       }
@@ -141335,17 +141511,17 @@
       "name": "Gold",
       "unit": "$/oz",
       "available": true,
-      "last": 4391.2,
+      "last": 4434.8,
       "verdict": "Bullish",
       "conviction": 2,
       "trend": "up",
-      "ma20": 4468.62,
-      "ma50": 4245.23,
+      "ma20": 4471.35,
+      "ma50": 4253.54,
       "latest_event": {
-        "date": "2026-09-08",
-        "surprise": -0.39,
-        "z": -1.31,
-        "actual": 98.77,
+        "date": "2026-09-03",
+        "surprise": -0.56,
+        "z": -1.91,
+        "actual": 99.0,
         "expected": 0.0,
         "direction": "bullish",
         "driver": "USD/rates (DXY move)"
@@ -141353,7 +141529,7 @@
       "event_edge": {
         "direction": "bullish",
         "hit_rate": 56.1,
-        "count": 281,
+        "count": 280,
         "t+1": {
           "avg": 0.14,
           "median": 0.14
@@ -141365,14 +141541,14 @@
         "bearish": 0
       },
       "levels": {
-        "entry": 4391.2,
-        "stop": 4268.26,
-        "target": 4637.07
+        "entry": 4434.8,
+        "stop": 4326.26,
+        "target": 4651.87
       },
       "leans_on_strategy": "Keltner breakout (ATR)",
       "leans_on_stats": {
-        "cagr_pct": 31.1,
-        "sharpe": 1.38,
+        "cagr_pct": 31.5,
+        "sharpe": 1.39,
         "max_drawdown_pct": -18.8,
         "trade_win_rate_pct": 60.0
       },
@@ -141380,14 +141556,14 @@
       "mcx": {
         "symbol": "MCX:GOLD26OCTFUT",
         "unit": "\u20b9/10g",
-        "lp": 152605.0,
-        "chp": -0.14
+        "lp": 153721.0,
+        "chp": 0.75
       },
       "levels_inr": {
         "unit": "\u20b9/10g",
-        "entry": 152605.0,
-        "stop": 148332.53,
-        "target": 161149.59
+        "entry": 153721.0,
+        "stop": 149958.74,
+        "target": 161245.18
       }
     },
     {
@@ -141395,17 +141571,17 @@
       "name": "Silver",
       "unit": "$/oz",
       "available": true,
-      "last": 66.24,
+      "last": 67.82,
       "verdict": "Neutral",
       "conviction": 1,
       "trend": "up",
-      "ma20": 66.49,
-      "ma50": 62.14,
+      "ma20": 66.65,
+      "ma50": 62.33,
       "latest_event": {
-        "date": "2026-09-08",
-        "surprise": -0.39,
-        "z": -1.31,
-        "actual": 98.77,
+        "date": "2026-09-03",
+        "surprise": -0.56,
+        "z": -1.91,
+        "actual": 99.0,
         "expected": 0.0,
         "direction": "bullish",
         "driver": "USD/rates (DXY move)"
@@ -141413,7 +141589,7 @@
       "event_edge": {
         "direction": "bullish",
         "hit_rate": 52.5,
-        "count": 281,
+        "count": 280,
         "t+1": {
           "avg": 0.14,
           "median": 0.07
@@ -141425,14 +141601,14 @@
         "bearish": 0
       },
       "levels": {
-        "entry": 66.24,
+        "entry": 67.82,
         "stop": null,
         "target": null
       },
       "leans_on_strategy": "Momentum (90d)",
       "leans_on_stats": {
-        "cagr_pct": 27.5,
-        "sharpe": 0.78,
+        "cagr_pct": 26.5,
+        "sharpe": 0.76,
         "max_drawdown_pct": -45.9,
         "trade_win_rate_pct": 50.0
       },
@@ -141440,12 +141616,12 @@
       "mcx": {
         "symbol": "MCX:SILVER26DECFUT",
         "unit": "\u20b9/kg",
-        "lp": 239425.0,
-        "chp": 0.17
+        "lp": 244300.0,
+        "chp": 2.04
       },
       "levels_inr": {
         "unit": "\u20b9/kg",
-        "entry": 239425.0,
+        "entry": 244300.0,
         "stop": null,
         "target": null
       }
@@ -141454,360 +141630,360 @@
   "news_all": [
     {
       "source": "OilPrice",
-      "title": "Iran\u2019s Oil Exports Collapse as Hormuz Standoff Drags On",
-      "summary": "More than six months after the U.S.-Iran war began, shipping traffic at the Strait of Hormuz remains disrupted, and oil prices are once again closing in on the $100 per barrel mark. The U.S. and Iran remain deadlocked at",
-      "link": "https://oilprice.com/Energy/Crude-Oil/Irans-Oil-Exports-Collapse-as-Hormuz-Standoff-Drags-On.html",
+      "title": "Oil Breaks $100\u2014and This Rally Has Legs",
+      "summary": "For months, crude oil prices have been constrained by reports of improving tanker traffic in the Strait of Hormuz. Even after the June ceasefire between Iran and the United States collapsed, tankers moving in and out of ",
+      "link": "https://oilprice.com/Energy/Crude-Oil/Oil-Breaks-100and-This-Rally-Has-Legs.html",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "OilPrice",
-      "title": "Hedge Funds Pile Into Fuels as U.S. Supply Squeeze Deepens",
-      "summary": "For the first four months of the war between the United States and Israel and Iran, oil traders remained largely bearish. The overwhelming expectation was that the war would end soon\u2014even as July rolled around\u2014and oil fl",
-      "link": "https://oilprice.com/Energy/Energy-General/Hedge-Funds-Pile-Into-Fuels-as-US-Supply-Squeeze-Deepens.html",
+      "title": "Canadian Oil Pushes Deeper Into U.S. Gulf Coast Market",
+      "summary": "For decades, the United States has been Canada\u2019s most important energy partner, absorbing the lion\u2019s share of its oil and gas production. After meeting its domestic refining needs, Canada exports ~80% of its crude output",
+      "link": "https://oilprice.com/Energy/Crude-Oil/Canadian-Oil-Pushes-Deeper-Into-US-Gulf-Coast-Market.html",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "OilPrice",
-      "title": "Why The U.S. Is Racing To Lock Down Iraq\u2019s Most Explosive Geopolitical Gas Prize",
-      "summary": "Sharing its eastern border with Iran, its northern border with Turkey, its western border with Syria and Jordan, and its southern border with Saudi Arabia, Iraq is arguably the single most geopolitically important countr",
-      "link": "https://oilprice.com/Energy/Natural-Gas/Why-The-US-Is-Racing-To-Lock-Down-Iraqs-Most-Explosive-Geopolitical-Gas-Prize.html",
+      "title": "The Commodity Bull Market Just Entered a Dangerous New Phase",
+      "summary": "Readers are familiar by now with the broad-based commodity rally, with energy, agricultural products and metals moving sharply higher as former Goldman Sachs commodities head Jeff Currie warned this summer of growing sca",
+      "link": "https://oilprice.com/Energy/Energy-General/The-Commodity-Bull-Market-Just-Entered-a-Dangerous-New-Phase.html",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "OilPrice",
-      "title": "Copper Surges Above $14,500 as Supply Squeeze Deepens",
-      "summary": "Copper futures in London reached a record high on Tuesday as expectations of US tariffs drew record volumes from the seaborne market into US warehouses, tightening availability elsewhere despite subdued demand. As we hig",
-      "link": "https://oilprice.com/Metals/Commodities/Copper-Surges-Above-14500-as-Supply-Squeeze-Deepens.html",
+      "title": "U.S. Crude Stocks Edge Lower as Oil Tops $100",
+      "summary": "The American Petroleum Institute (API) estimated that crude oil inventories in the United States fell 300,000 barrels in the week ending September 4. In the week prior, US crude oil inventories fell by 2.6 million barrel",
+      "link": "https://oilprice.com/Latest-Energy-News/World-News/US-Crude-Stocks-Edge-Lower-as-Oil-Tops-100.html",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "OilPrice",
-      "title": "Labor Day Gasoline Just Hit a Record. Here\u2019s What Comes Next",
-      "summary": "Beyond its historical roots as a day to honor the achievements and contributions of workers, Labor Day has emerged as one of the largest retail sales weekends of the year in the U.S., second only to Black Friday. People ",
-      "link": "https://oilprice.com/Energy/Energy-General/Labor-Day-Gasoline-Just-Hit-a-Record-Heres-What-Comes-Next.html",
+      "title": "Negative Power Prices Are Piling Up Across Europe",
+      "summary": "Europe desperately needs to ramp up its energy storage capacity if it wants to avoid another energy crisis. In the wake of Vladimir Putin's invasion of Ukraine back in 2022, the European Union made major strides in build",
+      "link": "https://oilprice.com/Energy/Energy-General/Negative-Power-Prices-Are-Piling-Up-Across-Europe.html",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "OilPrice",
-      "title": "China Adds 650,000 Ounces of Gold in Biggest Monthly Buy Since 2023",
-      "summary": "China's central bank bought more gold in August than in any single month since 2023, and the metal still can't hold above $4,400 an ounce. The People's Bank of China added 650,000 troy ounces, roughly 20 tonnes, to its r",
-      "link": "https://oilprice.com/Metals/Gold/China-Adds-650000-Ounces-of-Gold-in-Biggest-Monthly-Buy-Since-2023.html",
+      "title": "U.S. Administration Eyes Venezuela\u2019s Critical Minerals",
+      "summary": "After signing what President Donald Trump touted as \u201cthe biggest oil deal in world history\u201d to take majority control of 65 billion barrels of proven crude oil reserves in Venezuela, the U.S. Administration is setting its",
+      "link": "https://oilprice.com/Energy/Energy-General/US-Administration-Eyes-Venezuelas-Critical-Minerals.html",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "OilPrice",
-      "title": "D.C. Gas Ban Gets Favorable Hearing in Federal Appeals Court",
-      "summary": "A federal appeals panel appeared inclined Tuesday to let Washington, D.C.\u2019s restrictions on natural gas in certain new buildings stand. The case turns on the Energy Policy and Conservation Act, or EPCA, which gives the D",
-      "link": "https://oilprice.com/Latest-Energy-News/World-News/DC-Gas-Ban-Gets-Favorable-Hearing-in-Federal-Appeals-Court.html",
+      "title": "Britain Can Save \u00a3500 by Scrapping Net Zero, If It Ignores Most of the Bill",
+      "summary": "A new British report offers households an attractive deal: abandon net zero and save more than \u00a3500 a year. At a time of painfully high energy bills, that claim deserves attention. A transition households cannot finance ",
+      "link": "https://oilprice.com/Energy/Energy-General/Britain-Can-Save-500-by-Scrapping-Net-Zero-If-It-Ignores-Most-of-the-Bill.html",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "OilPrice",
-      "title": "How the U.S. Is Targeting Iran's Oil Money",
-      "summary": "The United States has imposed sanctions on a Turkish investment bank and two subsidiaries, accusing them of helping Iran move oil revenue and providing access to the international financial system as Washington intensifi",
-      "link": "https://oilprice.com/Geopolitics/Middle-East/How-the-US-Is-Targeting-Irans-Oil-Money.html",
+      "title": "Belarus Refineries Post Decade-High Profits Amid Russia's Fuel Crisis",
+      "summary": "Belarusian oil refineries recorded their highest profitability in a decade in 2026, according to the independent Pozirk news agency, as Russia's refining crisis pushed record volumes of gasoline and diesel across the bor",
+      "link": "https://oilprice.com/Latest-Energy-News/World-News/Belarus-Refineries-Post-Decade-High-Profits-Amid-Russias-Fuel-Crisis.html",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Commodities",
-      "title": "Trump directs GSA to take steps to remove Canadian goods from agency lists",
+      "title": "Brent settles at over $100 a barrel as Middle East conflict intensifies",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/trump-directs-gsa-to-take-steps-to-remove-canadian-goods-from-agency-lists-4892456",
+      "link": "https://www.investing.com/news/commodities-news/brent-crude-rises-above-100-a-barrel-as-middle-east-conflict-escalates-4892829",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Commodities",
-      "title": "Brent briefly tops $99/bbl as U.S. and Iran continue to escalate military action",
+      "title": "Spot gold up 1% amid muted dollar, elevated oil prices, and a slide in U.S. bonds",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/oil-extends-climb-after-iran-threat-to-gulf-energy-infrastructure-4890768",
+      "link": "https://www.investing.com/news/commodities-news/gold-rebounds-as-dollar-eases-but-fed-hike-risks-cap-gains-4892653",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Commodities",
-      "title": "Gold prices subdued as elevated Fed rate hike bets and oil offset weaker dollar",
+      "title": "London Gas Oil nears $1,438 resistance: Live levels",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/gold-rises-as-yen-surge-weakens-dollar-oil-and-fed-bets-cap-gains-4890770",
+      "link": "https://www.investing.com/news/commodities-news/london-gas-oil-stretched-10-above-50ma-live-levels-93CH-4890480",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Commodities",
-      "title": "Euronext wheat falls as Trump-Putin call revives Ukraine hopes",
+      "title": "Silver tests $69.50 resistance with weak ADX trend: Live levels",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/euronext-wheat-falls-as-trumpputin-call-revives-ukraine-hopes-93CH-4892171",
+      "link": "https://www.investing.com/news/commodities-news/silver-trapped-in-6468-range-breakout-imminent-live-levels-93CH-4890478",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Commodities",
-      "title": "Northwest European gasoline margins drop as crude prices rise",
+      "title": "Crude Oil WTI overbought at $96.34, 3.7% above MA: Live levels",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/northwest-european-gasoline-margins-drop-as-crude-prices-rise-93CH-4892163",
+      "link": "https://www.investing.com/news/commodities-news/crude-oil-wti-doubletop-at-9364-resistance-live-levels-93CH-4890479",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Commodities",
-      "title": "Factbox-Venezuela\u2019s mining sector: more data needed on geological potential",
+      "title": "Brent Oil hugs double top at $101.58: Live levels",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/factboxvenezuelas-mining-sector-more-data-needed-on-geological-potential-4892118",
+      "link": "https://www.investing.com/news/commodities-news/brent-oil-overbought-at-97-rsi-74-hourly-levels-93CH-4890477",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Commodities",
-      "title": "Copper prices near $15,000 as tariff uncertainty drives rally",
+      "title": "Gold deadlocked at $4,444 inside Ichimoku cloud: Live levels",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/copper-prices-near-15000-as-tariff-uncertainty-drives-rally-93CH-4892024",
+      "link": "https://www.investing.com/news/commodities-news/gold-trapped-at-4444-in-bullbear-standoff-live-levels-93CH-4890476",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Commodities",
-      "title": "Dangote refinery CEO says fuel shortages to last after Iran war",
+      "title": "Copper nears all-time high at $6.861, overbought: Hourly",
       "summary": "",
-      "link": "https://www.investing.com/news/commodities-news/dangote-refinery-ceo-says-fuel-shortages-to-last-after-iran-war-93CH-4891881",
+      "link": "https://www.investing.com/news/commodities-news/copper-overbought-at-668-with-weak-adx-live-levels-93CH-4890482",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Economy",
-      "title": "IRS under Trump unlawfully shared taxpayer info with immigration authorities, court rules",
+      "title": "Analysis-Samsung, SK Hynix payouts test South Korea\u2019s reform drive as investors seek more",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/irs-under-trump-unlawfully-shared-taxpayer-info-with-immigration-authorities-court-rules-4892276",
+      "link": "https://www.investing.com/news/economy-news/analysissamsung-sk-hynix-payouts-test-south-koreas-reform-drive-as-investors-seek-more-4894760",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Economy",
-      "title": "New Zealand to allow wealthy migrants to build rental housing",
+      "title": "Iran war could last through end of Trump\u2019s term- WSJ citing advisers",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/new-zealand-to-allow-wealthy-migrants-to-build-rental-housing-4892609",
+      "link": "https://www.investing.com/news/economy-news/iran-war-could-last-through-end-of-trumps-term-wsj-citing-advisers-4894744",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Economy",
-      "title": "Cognition AI raises $2 billion at $48 billion valuation",
+      "title": "S&P 500 ends down as oil tops $100 per barrel",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/cognition-ai-raises-2-billion-at-48-billion-valuation-4892546",
+      "link": "https://www.investing.com/news/economy-news/wall-st-futures-muted-as-oil-tops-100-for-first-time-since-july-4892997",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Economy",
-      "title": "US accuses Chinese AI firms of \u2019malicious\u2019 copying of AI technology",
+      "title": "UK housing market slowdown is bottoming out, RICS says",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/us-accuses-chinese-ai-firms-of-industrialscale-theft-of-ai-technology-4892191",
+      "link": "https://www.investing.com/news/economy-news/uk-housing-market-slowdown-is-bottoming-out-rics-says-4894732",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Economy",
-      "title": "Roll out the $100 barrel",
+      "title": "Dollar trades near 7-month low against yen as oil settles above $100",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/roll-out-the-100-barrel-4892486",
+      "link": "https://www.investing.com/news/economy-news/yen-stands-tall-as-dollar-wobbles-oils-run-towards-100-chills-sentiment-4892667",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Economy",
-      "title": "FDA names permanent leaders for drug, biologics and tobacco centers",
+      "title": "ECB set to hike as Iran war fuels fresh inflation fears",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/fda-names-permanent-leaders-for-drug-biologics-and-tobacco-centers-93CH-4892477",
+      "link": "https://www.investing.com/news/economy-news/ecb-set-to-hike-as-iran-war-fuels-fresh-inflation-fears-4894677",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Economy",
-      "title": "LIV Golf files for bankruptcy, plans player ownership model",
+      "title": "BOJ to raise rates to 1.25% this month, reach 1.75% faster than expected: Reuters poll",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/liv-golf-files-for-bankruptcy-plans-player-ownership-model-93CH-4892442",
+      "link": "https://www.investing.com/news/economy-news/boj-to-raise-rates-to-125-this-month-reach-175-faster-than-expected-reuters-poll-4894676",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Investing Economy",
-      "title": "Canada seeks to sell nuclear technology to Poland amid trade tensions",
+      "title": "Trading Day: $100 oil bites",
       "summary": "",
-      "link": "https://www.investing.com/news/economy-news/canada-seeks-to-sell-nuclear-technology-to-poland-amid-trade-tensions-93CH-4892190",
+      "link": "https://www.investing.com/news/economy-news/trading-day-100-oil-bites-4894600",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "ET Markets",
-      "title": "US stocks today: US stocks slip as AI fears weigh on software, while oil and rate bets add pressure",
-      "summary": "US stocks fell as renewed AI disruption fears hit software shares, while rising oil prices and shifting Federal Reserve rate expectations added pressure to markets. The S&P 500, Nasdaq and Dow declined as investors await",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-today-us-stocks-slip-as-ai-fears-weigh-on-software-while-oil-and-rate-bets-add-pressure/articleshow/133940798.cms",
+      "title": "US stocks today: US stocks retreat as oil crosses $100, yields rise ahead of inflation data",
+      "summary": "US stocks fell on Wednesday as Brent crude climbed above $100 a barrel, raising fresh inflation concerns and weighing on investor sentiment. The S&P 500, Nasdaq and Dow declined as Treasury yields rose ahead of key US in",
+      "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-today-us-stocks-retreat-as-oil-crosses-100-yields-rise-ahead-of-inflation-data/articleshow/133983348.cms",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "ET Markets",
-      "title": "Rentomojo IPO: BlackRock among investors in Rs 376 crore anchor round",
-      "summary": "Rentomojo has raised Rs 376 crore from anchor investors ahead of its IPO, which opens on September 9. The company allotted 93 lakh shares to 41 investors at Rs 404 apiece. BlackRock, Goldman Sachs, ICICI Prudential Mutua",
-      "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/rentomojo-ipo-blackrock-among-investors-in-rs-376-crore-anchor-round/articleshow/133937015.cms",
+      "title": "Barclays raises S&P 500 year-end target to 7,950 on strong earnings",
+      "summary": "Barclays raised its year-end S&P 500 target to 7,950 from 7,800, citing strong corporate earnings and continued AI investment. The brokerage expects earnings momentum to persist despite inflation, geopolitical risks and ",
+      "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/barclays-raises-sp-500-year-end-target-to-7950-on-strong-earnings/articleshow/133979410.cms",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "ET Markets",
-      "title": "ARCIL IPO: Goldman Sachs, BofA among investors in Rs 220 crore anchor round",
-      "summary": "Asset Reconstruction Company India has raised Rs 220 crore from anchor investors ahead of its IPO, which opens on September 9. The company allotted 1.58 crore shares to 21 investors at Rs 139 each. Goldman Sachs, BofA Se",
-      "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/arcil-ipo-goldman-sachs-bofa-among-investors-in-rs-220-crore-anchor-round/articleshow/133936634.cms",
+      "title": "ICICI Prudential AMC gets RBI approval to buy up to 9.95% stake in Kotak and 3 other banks",
+      "summary": "ICICI Prudential AMC secured Reserve Bank of India approval for significant bank share acquisitions. The approval allows for aggregate holdings up to 9.95 percent in four specific banks. These banks include Kotak Mahindr",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/icici-prudential-amc-gets-rbi-approval-to-buy-up-to-9-95-stake-in-kotak-and-3-other-banks/articleshow/133979457.cms",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "ET Markets",
-      "title": "NSE likely to price IPO at Rs 1,700-1,785 per share after a cut, say sources",
-      "summary": "National Stock Exchange of India is likely to price its long-awaited IPO at Rs 1,700-1,785 a share, below its earlier range of Rs 2,000-2,100. The exchange may also reduce the stake on offer to 5.5%, valuing NSE at up to",
-      "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/nse-set-to-price-india-ipo-at-rs-1700-to-rs-1785-a-share/articleshow/133935920.cms",
+      "title": "US stocks calm ahead of midterm polls, but markets may be underpricing the risk",
+      "summary": "US stocks remain near record highs ahead of the US midterm elections, but unusually low market volatility is raising concerns that investors may be underestimating risks. With the VIX near 15, analysts warn that crowded ",
+      "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-calm-ahead-of-midterm-elections-but-markets-may-be-underpricing-the-risk/articleshow/133977073.cms",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "ET Markets",
-      "title": "Karamtara Engineering raises Rs 262 crore from anchor investors ahead of IPO. HDFC MF among top buyers",
-      "summary": "Karamtara Engineering secured Rs 262.50 crore from anchor investors before its upcoming IPO. The company allocated over one crore shares at the IPO's upper price band. Domestic mutual funds and insurance companies partic",
-      "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/karamtara-engineering-raises-rs-262-crore-from-anchor-investors-ahead-of-ipo-hdfc-mf-among-top-buyers/articleshow/133934542.cms",
+      "title": "RBL Bank raises $350 million in debut international bond sale",
+      "summary": "RBL Bank has raised $350 million through its first international bond sale, pricing bonds tighter than initial guidance. Strong investor demand supports funding for GIFT City growth and liability management, while Emirat",
+      "link": "https://economictimes.indiatimes.com/markets/bonds/rbl-bank-raises-350-million-in-debut-international-bond-sale/articleshow/133975367.cms",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "ET Markets",
-      "title": "Jio IPO: Co set to begin investor outreach later this week, say sources",
-      "summary": "Jio Platforms is preparing for its massive initial public offering after receiving Sebi approval. Investor outreach will commence this week across key global financial centers. The company plans to issue fresh equity sha",
-      "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/jio-ipo-co-set-to-begin-investor-outreach-later-this-week-say-sources/articleshow/133934116.cms",
+      "title": "Ahead of Market: 10 things that will decide stock market action on Thursday",
+      "summary": "Indian markets extended their losing streak for a third day as soaring oil prices and Middle East tensions hurt sentiment. Sensex fell 813 points, Nifty dropped 204 points, and BSE market capitalisation lost over Rs 2 la",
+      "link": "https://economictimes.indiatimes.com/markets/stocks/news/ahead-of-market-10-things-that-will-decide-stock-market-action-on-thursday/articleshow/133974711.cms",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "ET Markets",
-      "title": "Ahead of Market: 10 things that will decide stock market action on Wednesday",
-      "summary": "Indian equities extended their decline on Tuesday, with Sensex falling 555 points and Nifty ending below 23,650. Analysts cited elevated crude prices, Fed rate hike concerns and IPO fund absorption, while technical signa",
-      "link": "https://economictimes.indiatimes.com/markets/stocks/news/ahead-of-market-10-things-that-will-decide-stock-market-action-on-wednesday/articleshow/133932341.cms",
+      "title": "US stocks today: US stocks slide as oil tops $100, stoking fresh inflation fears",
+      "summary": "US stocks slipped as Brent crude climbed above $100 a barrel amid escalating US-Iran tensions and disruptions to oil shipments through the Strait of Hormuz. Rising fuel costs are renewing inflation concerns ahead of key ",
+      "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-stocks-today-dow-jones-falls-300-points-as-oil-price-crosess-100/articleshow/133971560.cms",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "ET Markets",
-      "title": "U.S. consumers grow more uneasy about jobs & finances as high inflation outlook holds steady, NY Fed finds",
-      "summary": "US consumers grew more pessimistic about jobs and personal finances in August. Inflation expectations remained largely unchanged, showing little relief for households. Consumers raised unemployment rate expectations to t",
-      "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/consumers-more-worried-about-personal-finances-and-jobs-new-york-fed-report-shows/articleshow/133931535.cms",
+      "title": "Rupee falls to 95.11 vs US dollar as West Asia tensions drive oil fears",
+      "summary": "The rupee weakened 0.3% to 95.1050 against the dollar as escalating West Asia military tensions pushed Brent crude above $100. RBI intervention helped limit losses, while traders expect the currency to remain volatile am",
+      "link": "https://economictimes.indiatimes.com/markets/forex/forex-news/rupee-falls-to-95-11-vs-us-dollar-as-west-asia-tensions-drive-oil-fears/articleshow/133971268.cms",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Mining/Metals",
-      "title": "Marimaca hits thick copper-silver zone at Pampa Medina in Chile",
-      "summary": "The drilling adds scale to Pampa Medina as Marimaca advances its nearby oxide deposit towards a construction decision.",
-      "link": "https://www.mining.com/marimaca-hits-thick-copper-silver-zone-at-pampa-medina-in-chile/",
+      "title": "Mining stocks claim record 60% of 2026 TSX30",
+      "summary": "Miners claimed 18 spots as gold, silver and critical minerals drove strong three-year share-price gains across the Toronto Stock Exchange.",
+      "link": "https://www.mining.com/mining-stocks-claim-record-60-of-2026-tsx30/",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Mining/Metals",
-      "title": "Rio Tinto acquires Aurukun bauxite project from Glencore, Mitsubishi",
-      "summary": "The deal comes as Rio Tinto looks to end operations at its Gove bauxite mine in Australia\u2019s Northern Territory by 2030.",
-      "link": "https://www.mining.com/rio-tinto-acquires-aurukun-bauxite-project-from-glencore-mitsubishi/",
+      "title": "Precious metals still have something to prove: strategist",
+      "summary": "Gold, silver and miners have rallied, but chart patterns leave The Technical Traders\u2019 CEO, Chris Vermeulen, unconvinced.",
+      "link": "https://www.mining.com/precious-metals-still-have-something-to-prove-strategist/",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Mining/Metals",
-      "title": "Op-Ed: The Lobito blind spot and Zambia\u2019s manganese future",
-      "summary": "How Zambia\u2019s focus on copper risks leaving a major critical-mineral opportunity stranded.",
-      "link": "https://www.mining.com/op-ed-the-lobito-blind-spot-and-zambias-manganese-future/",
+      "title": "Agnico takes 22% of Vizsla in $32M Alaska deal",
+      "summary": "The structure gives Agnico exposure to the projects while shifting most of the cost and risk to the junior.",
+      "link": "https://www.mining.com/agnico-takes-22-of-vizsla-in-32m-alaska-deal/",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Mining/Metals",
-      "title": "Ivanhoe\u2019s giant Makoko copper find gets 30% bigger",
-      "summary": "The DRC discovery is moving towards mine planning as Ivanhoe expands drilling and prepares a 2027 scoping study.",
-      "link": "https://www.mining.com/ivanhoes-giant-makoko-copper-find-gets-30-bigger/",
+      "title": "Collective shares slide on Apollo\u2019s 4.1M-oz gold resource",
+      "summary": "A Collective executive said there\u2019s an opportunity to expand the Apollo project through its ongoing aggressive drill program.",
+      "link": "https://www.mining.com/collective-shares-slide-on-apollos-4-1m-oz-gold-resource/",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Mining/Metals",
-      "title": "MMG faces EU antitrust warning over Anglo nickel deal",
-      "summary": "Brussels is preparing formal objections to the Brazilian nickel acquisition amid concerns over critical mineral supply.",
-      "link": "https://www.mining.com/mmg-faces-eu-antitrust-warning-over-anglo-nickel-deal/",
+      "title": "Copper price pauses below record as China\u2019s imports slump, mine supply heads for first drop since 2017",
+      "summary": "China brought in 382,000 tonnes of copper in August, its weakest August in six years, while Collahuasi is restarting a mothballed leach plant now that $14,000 copper pays for the acid.",
+      "link": "https://www.mining.com/copper-price-pauses-below-record-as-chinas-imports-slump-mine-supply-heads-for-first-drop-since-2017/",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Mining/Metals",
-      "title": "BHP, KGHM join forces in global hunt for copper",
-      "summary": "The two mining heavyweights are looking beyond existing operations for new deposits as long-term copper demand accelerates.",
-      "link": "https://www.mining.com/bhp-kghm-join-forces-in-global-hunt-for-copper/",
+      "title": "Traceability is essential for the critical minerals supply chain, report",
+      "summary": "A new OECD study of lithium and nickel in four countries finds fragmented tracking and calls for shared standards and data use.",
+      "link": "https://www.mining.com/traceability-is-essential-for-the-critical-minerals-supply-chain-report/",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Mining/Metals",
-      "title": "Critical minerals security collides with decades-long mine timelines",
-      "summary": "Permitting is only part of the bottleneck, AiMinr CEO says.",
-      "link": "https://www.mining.com/critical-minerals-security-collides-with-decades-long-mine-timelines/",
+      "title": "Chile bill targets foreign cash for next mining boom",
+      "summary": "With tax breaks and easier market access, Chile aims to channel global investment into early-stage mineral exploration.",
+      "link": "https://www.mining.com/chile-bill-targets-foreign-cash-for-next-mining-boom/",
       "commodity": null,
       "impact": null,
       "why": ""
     },
     {
       "source": "Mining/Metals",
-      "title": "ACG Metals to acquire Ke\u015fkek gold project",
-      "summary": "The copper-focused company aims to use production from Ke\u015fkek to extend Gediktepe\u2019s operating life.",
-      "link": "https://www.mining.com/acg-metals-to-acquire-keskek-gold-project/",
+      "title": "Troilus triples value to $3.2B, closes in on funding",
+      "summary": "The miner's namesake copper-gold project carries a 22% after-tax IRR, a 3.6-year payback period and a 26-year operating life.",
+      "link": "https://www.mining.com/troilus-triples-value-to-3-2b-closes-in-on-funding/",
       "commodity": null,
       "impact": null,
       "why": ""
@@ -141816,26 +141992,26 @@
   "successful_strategies": [
     {
       "strategy": "Trend (20/50 MA)",
-      "avg_sharpe": 0.65,
-      "avg_cagr": 14.4,
+      "avg_sharpe": 0.67,
+      "avg_cagr": 15.2,
       "avg_win": 49.4
     },
     {
       "strategy": "Momentum (90d)",
-      "avg_sharpe": 0.21,
-      "avg_cagr": -7.0,
+      "avg_sharpe": 0.2,
+      "avg_cagr": -7.7,
       "avg_win": 38.0
     },
     {
       "strategy": "Donchian breakout (20/10)",
-      "avg_sharpe": 0.17,
-      "avg_cagr": -9.0,
+      "avg_sharpe": 0.18,
+      "avg_cagr": -8.6,
       "avg_win": 41.2
     },
     {
       "strategy": "Keltner breakout (ATR)",
-      "avg_sharpe": 0.15,
-      "avg_cagr": -10.8,
+      "avg_sharpe": 0.17,
+      "avg_cagr": -10.2,
       "avg_win": 31.9
     },
     {
@@ -141853,25 +142029,25 @@
     {
       "strategy": "Supertrend (10,3)",
       "avg_sharpe": 0.08,
-      "avg_cagr": -7.2,
+      "avg_cagr": -7.1,
       "avg_win": 45.0
     },
     {
       "strategy": "Seasonality (month bias)",
-      "avg_sharpe": 0.04,
-      "avg_cagr": -12.4,
+      "avg_sharpe": 0.05,
+      "avg_cagr": -12.1,
       "avg_win": 40.5
     },
     {
       "strategy": "Event + Trend filter",
       "avg_sharpe": -0.15,
-      "avg_cagr": -3.9,
+      "avg_cagr": -3.8,
       "avg_win": 43.9
     },
     {
       "strategy": "MACD (12/26/9)",
-      "avg_sharpe": -0.4,
-      "avg_cagr": -23.6,
+      "avg_sharpe": -0.41,
+      "avg_cagr": -23.9,
       "avg_win": 30.2
     },
     {
@@ -141882,5 +142058,5 @@
     }
   ],
   "how_to": "\n### How to take a trade from this desk\n1. **Start with the signal.** Each commodity shows a **Bullish / Bearish / Neutral**\n   verdict and a *conviction* (how many of trend, the inventory/USD event edge and\n   the news agree). Trade only the higher-conviction (2\u20133/3) setups; skip Neutral.\n2. **Use the levels.** The card gives a **reference entry, stop-loss (SL) and target**\n   \u2014 in \u20b9 on MCX when the Fyers price is live, otherwise on the international price.\n   The SL is 1.5\u00d7ATR from entry; the target is 3\u00d7ATR (a ~2:1 reward:risk).\n3. **Size by risk, not by lots.** Risk a fixed **1\u20132% of capital per trade**.\n   Quantity = (risk amount) \u00f7 (entry \u2212 SL distance). Never widen the stop.\n4. **Enter on confirmation** (a close in the signal's direction), place the SL and\n   target as a bracket, and let it run. Exit if the SL or target hits, or if the\n   signal flips.\n5. **Respect the report days.** Crude reacts to the Wed EIA inventory, gas to Thu\n   storage, metals to USD/rate shocks \u2014 the Event-Studies tab shows how the market\n   has historically moved, so avoid fresh entries into a print you can't stomach.\n6. **Lean on what has edge.** The Backtests + Trade History tabs show which\n   strategies actually worked over 3 years \u2014 prefer signals aligned with those.\n\n*Educational only \u2014 not advice. Backtests are hypothetical; manage your own risk.*\n",
-  "desk_note": "## Desk view \u2014 2026-09-09\n_AI note unavailable (set OPENROUTER_API_KEY). Rule-based summary:_\n\n### WTI Crude Oil \u2014 Bullish\n- Last 94.59 $/bbl, trend up. Bullish: trend is up; latest report skews bullish and that has an edge historically.\n- Latest report skews **bullish** \u2014 historically 84.5% hit-rate over 761 such events.\n- Leans on **Trend (20/50 MA)** (CAGR 32.3%, Sharpe 0.89, win-rate 76.9%).\n\n### Natural Gas \u2014 Neutral\n- Last 2.9 $/MMBtu, trend down. Neutral: trend is down.\n- Leans on **Bollinger reversion** (CAGR 23.0%, Sharpe 0.71, win-rate 76.9%).\n\n### Gold \u2014 Bullish\n- Last 4391.2 $/oz, trend up. Bullish: trend is up; latest report skews bullish and that has an edge historically.\n- Latest report skews **bullish** \u2014 historically 56.1% hit-rate over 281 such events.\n- Leans on **Keltner breakout (ATR)** (CAGR 31.1%, Sharpe 1.38, win-rate 60.0%).\n\n### Silver \u2014 Neutral\n- Last 66.24 $/oz, trend up. Neutral: trend is up.\n- Latest report skews **bullish** \u2014 historically 52.5% hit-rate over 281 such events.\n- Leans on **Momentum (90d)** (CAGR 27.5%, Sharpe 0.78, win-rate 50.0%).\n\n**Risk & caveats:** backtests are hypothetical and past reactions need not repeat. Educational only \u2014 manage your own risk."
+  "desk_note": "## Desk view \u2014 2026-09-10\n_AI note unavailable (set OPENROUTER_API_KEY). Rule-based summary:_\n\n### WTI Crude Oil \u2014 Neutral\n- Last 97.05 $/bbl, trend up. Neutral: trend is up.\n- Latest report skews **bullish** \u2014 historically 14.5% hit-rate over 761 such events.\n- Leans on **Trend (20/50 MA)** (CAGR 33.4%, Sharpe 0.91, win-rate 76.9%).\n\n### Natural Gas \u2014 Neutral\n- Last 2.81 $/MMBtu, trend down. Neutral: trend is down.\n- Leans on **Bollinger reversion** (CAGR 23.0%, Sharpe 0.71, win-rate 76.9%).\n\n### Gold \u2014 Bullish\n- Last 4434.8 $/oz, trend up. Bullish: trend is up; latest report skews bullish and that has an edge historically.\n- Latest report skews **bullish** \u2014 historically 56.1% hit-rate over 280 such events.\n- Leans on **Keltner breakout (ATR)** (CAGR 31.5%, Sharpe 1.39, win-rate 60.0%).\n\n### Silver \u2014 Neutral\n- Last 67.82 $/oz, trend up. Neutral: trend is up.\n- Latest report skews **bullish** \u2014 historically 52.5% hit-rate over 280 such events.\n- Leans on **Momentum (90d)** (CAGR 26.5%, Sharpe 0.76, win-rate 50.0%).\n\n**Risk & caveats:** backtests are hypothetical and past reactions need not repeat. Educational only \u2014 manage your own risk."
 }
